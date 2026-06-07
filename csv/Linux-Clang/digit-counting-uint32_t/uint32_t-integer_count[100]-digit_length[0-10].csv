@@ -1,0 +1,4 @@
+Library,Throughput (MB/s),Throughput Deviation (%),Bytes Processed,Measured Executions,Iterations to Stabilize,Position
+rtc-digit-count-32,4008.01,1.43515,553,60,46,Win
+fast-digit-count-32,3602.27,1.32182,555,60,33,Loss
+lemire-digit-count-32,1521.68,4.68715,553,60,41,Loss

@@ -1,0 +1,9 @@
+# digit-counting-uint32_t Stage Results
+#**CPU:** Apple M1 (Virtual)
+#**OS:** macOS-24.6.0
+#**Compiler:** Clang-22.1.6
+
+Library,Average Throughput (MB/s),Average Throughput Deviation (%),Average Bytes Processed,Average Measured Executions,Average Iterations to Stabilize,Wins,Ties,Losses
+fast-digit-count-32,1725.51,1.93355,101836,60,392.333,0,6,0
+lemire-digit-count-32,1723.17,2.13173,101844,60,326.5,0,5,1
+rtc-digit-count-32,1725.93,2.12892,101822,60,564,0,6,0

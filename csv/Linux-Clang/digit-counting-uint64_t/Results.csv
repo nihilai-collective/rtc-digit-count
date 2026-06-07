@@ -1,0 +1,9 @@
+# digit-counting-uint64_t Stage Results
+#**CPU:** Intel(R) Core(TM) i9-14900KF
+#**OS:** Linux-6.6.87.2-microsoft-standard-WSL2
+#**Compiler:** Clang-23.0.0
+
+Library,Average Throughput (MB/s),Average Throughput Deviation (%),Average Bytes Processed,Average Measured Executions,Average Iterations to Stabilize,Wins,Ties,Losses
+rtc-digit-count-64,5630.44,1.61545,193386,60,120.667,2,4,0
+lemire-digit-count-64,5180.1,2.12256,193545,60,236.5,0,3,3
+fast-digit-count-64,5603.82,1.61833,193509,60,205.5,0,4,2
