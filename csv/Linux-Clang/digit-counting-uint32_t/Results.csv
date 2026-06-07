@@ -1,0 +1,13 @@
+# digit-counting-uint32_t Stage Results
+#CPU: Intel(R) Core(TM) i9-14900KF-AVX2
+#OS: Linux-6.6.87.2-microsoft-standard-WSL2
+#Compiler: Clang-23.0.0
+
+# digit-counting-uint32_t Stage Config
+
+ClearCpuCachesBeforeIterations,MeasuredIterationCount,MaxIterationCount,ConvergenceThreshold,MaxTimeInS,RseThreshold,MaxK,MinK
+true,60,3000,1,5,2.5,100000,30
+
+Library,Wins,Ties,Losses
+rtc_digit_count,3,2,1
+lemire_digit_count,1,2,3

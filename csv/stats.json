@@ -1,0 +1,2039 @@
+{
+    "library":  "rtc-digit-count",
+    "branch":  "main",
+    "generatedAt":  "2026-07-25T04:16:06.4280246Z",
+    "summary":  {
+                    "rtc_digit_count":  {
+                                            "wins":  18,
+                                            "ties":  18,
+                                            "losses":  10
+                                        },
+                    "lemire_digit_count":  {
+                                               "wins":  6,
+                                               "ties":  21,
+                                               "losses":  18
+                                           },
+                    "fast_digit_count":  {
+                                             "wins":  3,
+                                             "ties":  10,
+                                             "losses":  1
+                                         }
+                },
+    "platforms":  {
+                      "linux-clang":  {
+                                          "cpu":  "Intel(R) Core(TM) i9-14900KF-AVX2",
+                                          "os":  "Linux-6.6.87.2-microsoft-standard-WSL2",
+                                          "compiler":  "Clang-23.0.0",
+                                          "harness":  {
+                                                          "clearCpuCachesBeforeIterations":  true,
+                                                          "measuredIterationCount":  60,
+                                                          "maxIterationCount":  3000,
+                                                          "convergenceThreshold":  1,
+                                                          "maxTimeInS":  5,
+                                                          "rseThreshold":  2.5,
+                                                          "maxK":  100000,
+                                                          "minK":  30
+                                                      },
+                                          "wtl":  {
+                                                      "rtc_digit_count":  {
+                                                                              "wins":  7,
+                                                                              "ties":  4,
+                                                                              "losses":  1
+                                                                          },
+                                                      "lemire_digit_count":  {
+                                                                                 "wins":  1,
+                                                                                 "ties":  4,
+                                                                                 "losses":  7
+                                                                             }
+                                                  },
+                                          "tests":  [
+                                                        {
+                                                            "name":  "uint32_t-integer_count[100000]-digit_length[0-10]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint32_t",
+                                                                           "intType":  "uint32_t",
+                                                                           "count":  100000,
+                                                                           "digitLength":  "0-10"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  4285.82,
+                                                                             "rse":  0.42891,
+                                                                             "windowDuration":  "101.114ms",
+                                                                             "fileSizeBytes":  552089,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  8329210,
+                                                                             "latencyNs":  122850,
+                                                                             "cyclesPerByte":  0.709007,
+                                                                             "verdict":  "win"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "lemire_digit_count",
+                                                                             "mbps":  4063.76,
+                                                                             "rse":  0.531792,
+                                                                             "windowDuration":  "23.4664ms",
+                                                                             "fileSizeBytes":  552089,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  14241900,
+                                                                             "latencyNs":  129563,
+                                                                             "cyclesPerByte":  0.747692,
+                                                                             "verdict":  "loss"
+                                                                         }
+                                                                     ]
+                                                        },
+                                                        {
+                                                            "name":  "uint32_t-integer_count[10000]-digit_length[0-10]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint32_t",
+                                                                           "intType":  "uint32_t",
+                                                                           "count":  10000,
+                                                                           "digitLength":  "0-10"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  4304.9,
+                                                                             "rse":  1.58461,
+                                                                             "windowDuration":  "2.27491ms",
+                                                                             "fileSizeBytes":  54788,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  1109710,
+                                                                             "latencyNs":  12137.3,
+                                                                             "cyclesPerByte":  0.70449,
+                                                                             "verdict":  "tie"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "lemire_digit_count",
+                                                                             "mbps":  4223.34,
+                                                                             "rse":  1.66508,
+                                                                             "windowDuration":  "5.37943ms",
+                                                                             "fileSizeBytes":  54788,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  1273060,
+                                                                             "latencyNs":  12371.7,
+                                                                             "cyclesPerByte":  0.717668,
+                                                                             "verdict":  "tie"
+                                                                         }
+                                                                     ]
+                                                        },
+                                                        {
+                                                            "name":  "uint32_t-integer_count[1000]-digit_length[0-10]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint32_t",
+                                                                           "intType":  "uint32_t",
+                                                                           "count":  1000,
+                                                                           "digitLength":  "0-10"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "lemire_digit_count",
+                                                                             "mbps":  4664.01,
+                                                                             "rse":  0.0907678,
+                                                                             "windowDuration":  "0.522751ms",
+                                                                             "fileSizeBytes":  5527,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  31.5678,
+                                                                             "latencyNs":  1130.13,
+                                                                             "cyclesPerByte":  0.64118,
+                                                                             "verdict":  "win"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  3610.08,
+                                                                             "rse":  0.721923,
+                                                                             "windowDuration":  "0.255233ms",
+                                                                             "fileSizeBytes":  5527,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  3333.1,
+                                                                             "latencyNs":  1460.07,
+                                                                             "cyclesPerByte":  0.828659,
+                                                                             "verdict":  "loss"
+                                                                         }
+                                                                     ]
+                                                        },
+                                                        {
+                                                            "name":  "uint32_t-integer_count[100]-digit_length[0-10]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint32_t",
+                                                                           "intType":  "uint32_t",
+                                                                           "count":  100,
+                                                                           "digitLength":  "0-10"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  3314.2,
+                                                                             "rse":  0.0632506,
+                                                                             "windowDuration":  "0.037865ms",
+                                                                             "fileSizeBytes":  509,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  0.257471,
+                                                                             "latencyNs":  146.467,
+                                                                             "cyclesPerByte":  0.800393,
+                                                                             "verdict":  "win"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "lemire_digit_count",
+                                                                             "mbps":  2765.4,
+                                                                             "rse":  0.115025,
+                                                                             "windowDuration":  "0.041248ms",
+                                                                             "fileSizeBytes":  509,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  1.22299,
+                                                                             "latencyNs":  175.533,
+                                                                             "cyclesPerByte":  0.843091,
+                                                                             "verdict":  "loss"
+                                                                         }
+                                                                     ]
+                                                        },
+                                                        {
+                                                            "name":  "uint32_t-integer_count[10]-digit_length[0-10]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint32_t",
+                                                                           "intType":  "uint32_t",
+                                                                           "count":  10,
+                                                                           "digitLength":  "0-10"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  991.444,
+                                                                             "rse":  0.133927,
+                                                                             "windowDuration":  "0.020984ms",
+                                                                             "fileSizeBytes":  49,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  0.11954,
+                                                                             "latencyNs":  47.1333,
+                                                                             "cyclesPerByte":  0.819728,
+                                                                             "verdict":  "tie"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "lemire_digit_count",
+                                                                             "mbps":  989.345,
+                                                                             "rse":  0.375494,
+                                                                             "windowDuration":  "0.020441ms",
+                                                                             "fileSizeBytes":  49,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  0.943678,
+                                                                             "latencyNs":  47.2333,
+                                                                             "cyclesPerByte":  0.957143,
+                                                                             "verdict":  "tie"
+                                                                         }
+                                                                     ]
+                                                        },
+                                                        {
+                                                            "name":  "uint32_t-integer_count[1]-digit_length[0-10]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint32_t",
+                                                                           "intType":  "uint32_t",
+                                                                           "count":  1,
+                                                                           "digitLength":  "0-10"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  140.937,
+                                                                             "rse":  0.492611,
+                                                                             "windowDuration":  "0.018028ms",
+                                                                             "fileSizeBytes":  5,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  0.833333,
+                                                                             "latencyNs":  33.8333,
+                                                                             "cyclesPerByte":  4.66667,
+                                                                             "verdict":  "win"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "lemire_digit_count",
+                                                                             "mbps":  138.885,
+                                                                             "rse":  0.290704,
+                                                                             "windowDuration":  "0.01845ms",
+                                                                             "fileSizeBytes":  5,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  0.298851,
+                                                                             "latencyNs":  34.3333,
+                                                                             "cyclesPerByte":  5.02667,
+                                                                             "verdict":  "loss"
+                                                                         }
+                                                                     ]
+                                                        },
+                                                        {
+                                                            "name":  "uint64_t-integer_count[100000]-digit_length[0-20]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint64_t",
+                                                                           "intType":  "uint64_t",
+                                                                           "count":  100000,
+                                                                           "digitLength":  "0-20"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  8049.63,
+                                                                             "rse":  1.00265,
+                                                                             "windowDuration":  "23.319ms",
+                                                                             "fileSizeBytes":  1045447,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  46267500,
+                                                                             "latencyNs":  123859,
+                                                                             "cyclesPerByte":  0.37747,
+                                                                             "verdict":  "win"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "lemire_digit_count",
+                                                                             "mbps":  7347.35,
+                                                                             "rse":  0.277416,
+                                                                             "windowDuration":  "24.311ms",
+                                                                             "fileSizeBytes":  1045447,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  4251360,
+                                                                             "latencyNs":  135697,
+                                                                             "cyclesPerByte":  0.413495,
+                                                                             "verdict":  "loss"
+                                                                         }
+                                                                     ]
+                                                        },
+                                                        {
+                                                            "name":  "uint64_t-integer_count[10000]-digit_length[0-20]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint64_t",
+                                                                           "intType":  "uint64_t",
+                                                                           "count":  10000,
+                                                                           "digitLength":  "0-20"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  8369,
+                                                                             "rse":  1.08814,
+                                                                             "windowDuration":  "2.23554ms",
+                                                                             "fileSizeBytes":  104325,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  502019,
+                                                                             "latencyNs":  11888.2,
+                                                                             "cyclesPerByte":  0.362549,
+                                                                             "verdict":  "win"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "lemire_digit_count",
+                                                                             "mbps":  7824.74,
+                                                                             "rse":  0.389951,
+                                                                             "windowDuration":  "2.36797ms",
+                                                                             "fileSizeBytes":  104325,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  73752.9,
+                                                                             "latencyNs":  12715.1,
+                                                                             "cyclesPerByte":  0.387817,
+                                                                             "verdict":  "loss"
+                                                                         }
+                                                                     ]
+                                                        },
+                                                        {
+                                                            "name":  "uint64_t-integer_count[1000]-digit_length[0-20]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint64_t",
+                                                                           "intType":  "uint64_t",
+                                                                           "count":  1000,
+                                                                           "digitLength":  "0-20"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  8705.15,
+                                                                             "rse":  0.0606507,
+                                                                             "windowDuration":  "0.241886ms",
+                                                                             "fileSizeBytes":  10325,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  14.1195,
+                                                                             "latencyNs":  1131.13,
+                                                                             "cyclesPerByte":  0.343603,
+                                                                             "verdict":  "win"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "lemire_digit_count",
+                                                                             "mbps":  6484.91,
+                                                                             "rse":  0.56163,
+                                                                             "windowDuration":  "0.260409ms",
+                                                                             "fileSizeBytes":  10325,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  2181.7,
+                                                                             "latencyNs":  1518.4,
+                                                                             "cyclesPerByte":  0.461585,
+                                                                             "verdict":  "loss"
+                                                                         }
+                                                                     ]
+                                                        },
+                                                        {
+                                                            "name":  "uint64_t-integer_count[100]-digit_length[0-20]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint64_t",
+                                                                           "intType":  "uint64_t",
+                                                                           "count":  100,
+                                                                           "digitLength":  "0-20"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "lemire_digit_count",
+                                                                             "mbps":  5869.18,
+                                                                             "rse":  0.136387,
+                                                                             "windowDuration":  "0.039887ms",
+                                                                             "fileSizeBytes":  1085,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  1.73448,
+                                                                             "latencyNs":  176.3,
+                                                                             "cyclesPerByte":  0.407926,
+                                                                             "verdict":  "tie"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  5859.21,
+                                                                             "rse":  0.107233,
+                                                                             "windowDuration":  "0.039968ms",
+                                                                             "fileSizeBytes":  1085,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  1.07586,
+                                                                             "latencyNs":  176.6,
+                                                                             "cyclesPerByte":  0.392811,
+                                                                             "verdict":  "tie"
+                                                                         }
+                                                                     ]
+                                                        },
+                                                        {
+                                                            "name":  "uint64_t-integer_count[10]-digit_length[0-20]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint64_t",
+                                                                           "intType":  "uint64_t",
+                                                                           "count":  10,
+                                                                           "digitLength":  "0-20"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  3085.93,
+                                                                             "rse":  0.286051,
+                                                                             "windowDuration":  "0.01867ms",
+                                                                             "fileSizeBytes":  118,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  0.326437,
+                                                                             "latencyNs":  36.4667,
+                                                                             "cyclesPerByte":  0.260169,
+                                                                             "verdict":  "win"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "lemire_digit_count",
+                                                                             "mbps":  2360.84,
+                                                                             "rse":  0.183645,
+                                                                             "windowDuration":  "0.020752ms",
+                                                                             "fileSizeBytes":  118,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  0.229885,
+                                                                             "latencyNs":  47.6667,
+                                                                             "cyclesPerByte":  0.434181,
+                                                                             "verdict":  "loss"
+                                                                         }
+                                                                     ]
+                                                        },
+                                                        {
+                                                            "name":  "uint64_t-integer_count[1]-digit_length[0-20]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint64_t",
+                                                                           "intType":  "uint64_t",
+                                                                           "count":  1,
+                                                                           "digitLength":  "0-20"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  421.255,
+                                                                             "rse":  0.435301,
+                                                                             "windowDuration":  "0.017165ms",
+                                                                             "fileSizeBytes":  12,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  0.41954,
+                                                                             "latencyNs":  27.1667,
+                                                                             "cyclesPerByte":  1.59722,
+                                                                             "verdict":  "tie"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "lemire_digit_count",
+                                                                             "mbps":  417.16,
+                                                                             "rse":  0.416657,
+                                                                             "windowDuration":  "0.017368ms",
+                                                                             "fileSizeBytes":  12,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  0.391954,
+                                                                             "latencyNs":  27.4333,
+                                                                             "cyclesPerByte":  1.62778,
+                                                                             "verdict":  "tie"
+                                                                         }
+                                                                     ]
+                                                        }
+                                                    ]
+                                      },
+                      "linux-gcc":  {
+                                        "cpu":  "Intel(R) Core(TM) i9-14900KF-AVX2",
+                                        "os":  "Linux-6.6.87.2-microsoft-standard-WSL2",
+                                        "compiler":  "GCC-16.0.1",
+                                        "harness":  {
+                                                        "clearCpuCachesBeforeIterations":  true,
+                                                        "measuredIterationCount":  60,
+                                                        "maxIterationCount":  3000,
+                                                        "convergenceThreshold":  1,
+                                                        "maxTimeInS":  5,
+                                                        "rseThreshold":  2.5,
+                                                        "maxK":  100000,
+                                                        "minK":  30
+                                                    },
+                                        "wtl":  {
+                                                    "rtc_digit_count":  {
+                                                                            "wins":  8,
+                                                                            "ties":  1,
+                                                                            "losses":  3
+                                                                        },
+                                                    "lemire_digit_count":  {
+                                                                               "wins":  3,
+                                                                               "ties":  1,
+                                                                               "losses":  8
+                                                                           }
+                                                },
+                                        "tests":  [
+                                                      {
+                                                          "name":  "uint32_t-integer_count[100000]-digit_length[0-10]",
+                                                          "params":  {
+                                                                         "group":  "digit-counting-uint32_t",
+                                                                         "intType":  "uint32_t",
+                                                                         "count":  100000,
+                                                                         "digitLength":  "0-10"
+                                                                     },
+                                                          "rows":  [
+                                                                       {
+                                                                           "lib":  "rtc_digit_count",
+                                                                           "mbps":  4631.55,
+                                                                           "rse":  0.649186,
+                                                                           "windowDuration":  "21.1197ms",
+                                                                           "fileSizeBytes":  551320,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  16293500,
+                                                                           "latencyNs":  113521,
+                                                                           "cyclesPerByte":  0.655932,
+                                                                           "verdict":  "win"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "lemire_digit_count",
+                                                                           "mbps":  4121.37,
+                                                                           "rse":  0.324314,
+                                                                           "windowDuration":  "23.2451ms",
+                                                                           "fileSizeBytes":  551320,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  5135460,
+                                                                           "latencyNs":  127574,
+                                                                           "cyclesPerByte":  0.737251,
+                                                                           "verdict":  "loss"
+                                                                       }
+                                                                   ]
+                                                      },
+                                                      {
+                                                          "name":  "uint32_t-integer_count[10000]-digit_length[0-10]",
+                                                          "params":  {
+                                                                         "group":  "digit-counting-uint32_t",
+                                                                         "intType":  "uint32_t",
+                                                                         "count":  10000,
+                                                                         "digitLength":  "0-10"
+                                                                     },
+                                                          "rows":  [
+                                                                       {
+                                                                           "lib":  "rtc_digit_count",
+                                                                           "mbps":  4510.26,
+                                                                           "rse":  2.31091,
+                                                                           "windowDuration":  "2.11241ms",
+                                                                           "fileSizeBytes":  54660,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  2140040,
+                                                                           "latencyNs":  11557.6,
+                                                                           "cyclesPerByte":  0.672332,
+                                                                           "verdict":  "win"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "lemire_digit_count",
+                                                                           "mbps":  4185.46,
+                                                                           "rse":  0.93249,
+                                                                           "windowDuration":  "2.3004ms",
+                                                                           "fileSizeBytes":  54660,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  404634,
+                                                                           "latencyNs":  12454.5,
+                                                                           "cyclesPerByte":  0.724427,
+                                                                           "verdict":  "loss"
+                                                                       }
+                                                                   ]
+                                                      },
+                                                      {
+                                                          "name":  "uint32_t-integer_count[1000]-digit_length[0-10]",
+                                                          "params":  {
+                                                                         "group":  "digit-counting-uint32_t",
+                                                                         "intType":  "uint32_t",
+                                                                         "count":  1000,
+                                                                         "digitLength":  "0-10"
+                                                                     },
+                                                          "rows":  [
+                                                                       {
+                                                                           "lib":  "rtc_digit_count",
+                                                                           "mbps":  4767.94,
+                                                                           "rse":  0.0583339,
+                                                                           "windowDuration":  "0.520297ms",
+                                                                           "fileSizeBytes":  5546,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  12.5621,
+                                                                           "latencyNs":  1109.3,
+                                                                           "cyclesPerByte":  0.626962,
+                                                                           "verdict":  "win"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "lemire_digit_count",
+                                                                           "mbps":  4725.63,
+                                                                           "rse":  0.207609,
+                                                                           "windowDuration":  "0.434017ms",
+                                                                           "fileSizeBytes":  5546,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  161.978,
+                                                                           "latencyNs":  1119.23,
+                                                                           "cyclesPerByte":  0.632708,
+                                                                           "verdict":  "loss"
+                                                                       }
+                                                                   ]
+                                                      },
+                                                      {
+                                                          "name":  "uint32_t-integer_count[100]-digit_length[0-10]",
+                                                          "params":  {
+                                                                         "group":  "digit-counting-uint32_t",
+                                                                         "intType":  "uint32_t",
+                                                                         "count":  100,
+                                                                         "digitLength":  "0-10"
+                                                                     },
+                                                          "rows":  [
+                                                                       {
+                                                                           "lib":  "rtc_digit_count",
+                                                                           "mbps":  2547.93,
+                                                                           "rse":  0.0913649,
+                                                                           "windowDuration":  "0.040052ms",
+                                                                           "fileSizeBytes":  472,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  0.781609,
+                                                                           "latencyNs":  176.667,
+                                                                           "cyclesPerByte":  1.03891,
+                                                                           "verdict":  "win"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "lemire_digit_count",
+                                                                           "mbps":  2527.42,
+                                                                           "rse":  0.135544,
+                                                                           "windowDuration":  "0.039329ms",
+                                                                           "fileSizeBytes":  472,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  1.74828,
+                                                                           "latencyNs":  178.1,
+                                                                           "cyclesPerByte":  1.04633,
+                                                                           "verdict":  "loss"
+                                                                       }
+                                                                   ]
+                                                      },
+                                                      {
+                                                          "name":  "uint32_t-integer_count[10]-digit_length[0-10]",
+                                                          "params":  {
+                                                                         "group":  "digit-counting-uint32_t",
+                                                                         "intType":  "uint32_t",
+                                                                         "count":  10,
+                                                                         "digitLength":  "0-10"
+                                                                     },
+                                                          "rows":  [
+                                                                       {
+                                                                           "lib":  "lemire_digit_count",
+                                                                           "mbps":  1175.76,
+                                                                           "rse":  0.287458,
+                                                                           "windowDuration":  "0.020754ms",
+                                                                           "fileSizeBytes":  57,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  0.529885,
+                                                                           "latencyNs":  46.2333,
+                                                                           "cyclesPerByte":  0.82807,
+                                                                           "verdict":  "win"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "rtc_digit_count",
+                                                                           "mbps":  1123.13,
+                                                                           "rse":  0.254497,
+                                                                           "windowDuration":  "0.022449ms",
+                                                                           "fileSizeBytes":  57,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  0.455172,
+                                                                           "latencyNs":  48.4,
+                                                                           "cyclesPerByte":  0.715205,
+                                                                           "verdict":  "loss"
+                                                                       }
+                                                                   ]
+                                                      },
+                                                      {
+                                                          "name":  "uint32_t-integer_count[1]-digit_length[0-10]",
+                                                          "params":  {
+                                                                         "group":  "digit-counting-uint32_t",
+                                                                         "intType":  "uint32_t",
+                                                                         "count":  1,
+                                                                         "digitLength":  "0-10"
+                                                                     },
+                                                          "rows":  [
+                                                                       {
+                                                                           "lib":  "lemire_digit_count",
+                                                                           "mbps":  349.758,
+                                                                           "rse":  0.428324,
+                                                                           "windowDuration":  "0.017638ms",
+                                                                           "fileSizeBytes":  10,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  0.409195,
+                                                                           "latencyNs":  27.2667,
+                                                                           "cyclesPerByte":  2.10333,
+                                                                           "verdict":  "win"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "rtc_digit_count",
+                                                                           "mbps":  271.187,
+                                                                           "rse":  0.41091,
+                                                                           "windowDuration":  "0.019181ms",
+                                                                           "fileSizeBytes":  10,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  0.626437,
+                                                                           "latencyNs":  35.1667,
+                                                                           "cyclesPerByte":  2.51667,
+                                                                           "verdict":  "loss"
+                                                                       }
+                                                                   ]
+                                                      },
+                                                      {
+                                                          "name":  "uint64_t-integer_count[100000]-digit_length[0-20]",
+                                                          "params":  {
+                                                                         "group":  "digit-counting-uint64_t",
+                                                                         "intType":  "uint64_t",
+                                                                         "count":  100000,
+                                                                         "digitLength":  "0-20"
+                                                                     },
+                                                          "rows":  [
+                                                                       {
+                                                                           "lib":  "rtc_digit_count",
+                                                                           "mbps":  8523.98,
+                                                                           "rse":  0.558271,
+                                                                           "windowDuration":  "21.9258ms",
+                                                                           "fileSizeBytes":  1044074,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  12758200,
+                                                                           "latencyNs":  116812,
+                                                                           "cyclesPerByte":  0.356437,
+                                                                           "verdict":  "win"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "lemire_digit_count",
+                                                                           "mbps":  7742.71,
+                                                                           "rse":  0.733299,
+                                                                           "windowDuration":  "23.4766ms",
+                                                                           "fileSizeBytes":  1044074,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  26678400,
+                                                                           "latencyNs":  128599,
+                                                                           "cyclesPerByte":  0.392418,
+                                                                           "verdict":  "loss"
+                                                                       }
+                                                                   ]
+                                                      },
+                                                      {
+                                                          "name":  "uint64_t-integer_count[10000]-digit_length[0-20]",
+                                                          "params":  {
+                                                                         "group":  "digit-counting-uint64_t",
+                                                                         "intType":  "uint64_t",
+                                                                         "count":  10000,
+                                                                         "digitLength":  "0-20"
+                                                                     },
+                                                          "rows":  [
+                                                                       {
+                                                                           "lib":  "rtc_digit_count",
+                                                                           "mbps":  8563.27,
+                                                                           "rse":  2.11381,
+                                                                           "windowDuration":  "2.14778ms",
+                                                                           "fileSizeBytes":  105257,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  1841940,
+                                                                           "latencyNs":  11722.3,
+                                                                           "cyclesPerByte":  0.354187,
+                                                                           "verdict":  "win"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "lemire_digit_count",
+                                                                           "mbps":  8152.3,
+                                                                           "rse":  0.869993,
+                                                                           "windowDuration":  "2.3376ms",
+                                                                           "fileSizeBytes":  105257,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  344266,
+                                                                           "latencyNs":  12313.2,
+                                                                           "cyclesPerByte":  0.372107,
+                                                                           "verdict":  "loss"
+                                                                       }
+                                                                   ]
+                                                      },
+                                                      {
+                                                          "name":  "uint64_t-integer_count[1000]-digit_length[0-20]",
+                                                          "params":  {
+                                                                         "group":  "digit-counting-uint64_t",
+                                                                         "intType":  "uint64_t",
+                                                                         "count":  1000,
+                                                                         "digitLength":  "0-20"
+                                                                     },
+                                                          "rows":  [
+                                                                       {
+                                                                           "lib":  "lemire_digit_count",
+                                                                           "mbps":  8792.11,
+                                                                           "rse":  0.0741256,
+                                                                           "windowDuration":  "0.237231ms",
+                                                                           "fileSizeBytes":  10477,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  21.2885,
+                                                                           "latencyNs":  1136.43,
+                                                                           "cyclesPerByte":  0.34012,
+                                                                           "verdict":  "win"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "rtc_digit_count",
+                                                                           "mbps":  6857.37,
+                                                                           "rse":  0.0940523,
+                                                                           "windowDuration":  "0.254698ms",
+                                                                           "fileSizeBytes":  10477,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  56.3402,
+                                                                           "latencyNs":  1457.07,
+                                                                           "cyclesPerByte":  0.436162,
+                                                                           "verdict":  "loss"
+                                                                       }
+                                                                   ]
+                                                      },
+                                                      {
+                                                          "name":  "uint64_t-integer_count[100]-digit_length[0-20]",
+                                                          "params":  {
+                                                                         "group":  "digit-counting-uint64_t",
+                                                                         "intType":  "uint64_t",
+                                                                         "count":  100,
+                                                                         "digitLength":  "0-20"
+                                                                     },
+                                                          "rows":  [
+                                                                       {
+                                                                           "lib":  "rtc_digit_count",
+                                                                           "mbps":  5672.72,
+                                                                           "rse":  0.0642644,
+                                                                           "windowDuration":  "0.039753ms",
+                                                                           "fileSizeBytes":  1081,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  0.409195,
+                                                                           "latencyNs":  181.733,
+                                                                           "cyclesPerByte":  0.465711,
+                                                                           "verdict":  "win"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "lemire_digit_count",
+                                                                           "mbps":  5619.12,
+                                                                           "rse":  0.33029,
+                                                                           "windowDuration":  "0.04193ms",
+                                                                           "fileSizeBytes":  1081,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  11.0161,
+                                                                           "latencyNs":  183.467,
+                                                                           "cyclesPerByte":  0.471631,
+                                                                           "verdict":  "loss"
+                                                                       }
+                                                                   ]
+                                                      },
+                                                      {
+                                                          "name":  "uint64_t-integer_count[10]-digit_length[0-20]",
+                                                          "params":  {
+                                                                         "group":  "digit-counting-uint64_t",
+                                                                         "intType":  "uint64_t",
+                                                                         "count":  10,
+                                                                         "digitLength":  "0-20"
+                                                                     },
+                                                          "rows":  [
+                                                                       {
+                                                                           "lib":  "rtc_digit_count",
+                                                                           "mbps":  1237.34,
+                                                                           "rse":  0.302655,
+                                                                           "windowDuration":  "0.018859ms",
+                                                                           "fileSizeBytes":  49,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  0.391954,
+                                                                           "latencyNs":  37.7667,
+                                                                           "cyclesPerByte":  0.663946,
+                                                                           "verdict":  "win"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "lemire_digit_count",
+                                                                           "mbps":  981.037,
+                                                                           "rse":  0.235704,
+                                                                           "windowDuration":  "0.020764ms",
+                                                                           "fileSizeBytes":  49,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  0.378161,
+                                                                           "latencyNs":  47.6333,
+                                                                           "cyclesPerByte":  1.00408,
+                                                                           "verdict":  "loss"
+                                                                       }
+                                                                   ]
+                                                      },
+                                                      {
+                                                          "name":  "uint64_t-integer_count[1]-digit_length[0-20]",
+                                                          "params":  {
+                                                                         "group":  "digit-counting-uint64_t",
+                                                                         "intType":  "uint64_t",
+                                                                         "count":  1,
+                                                                         "digitLength":  "0-20"
+                                                                     },
+                                                          "rows":  [
+                                                                       {
+                                                                           "lib":  "rtc_digit_count",
+                                                                           "mbps":  79.4729,
+                                                                           "rse":  0.297809,
+                                                                           "windowDuration":  "0.0191ms",
+                                                                           "fileSizeBytes":  3,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  0.344828,
+                                                                           "latencyNs":  36,
+                                                                           "cyclesPerByte":  8.77778,
+                                                                           "verdict":  "tie"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "lemire_digit_count",
+                                                                           "mbps":  79.2527,
+                                                                           "rse":  0.360074,
+                                                                           "windowDuration":  "0.019618ms",
+                                                                           "fileSizeBytes":  3,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  0.506897,
+                                                                           "latencyNs":  36.1,
+                                                                           "cyclesPerByte":  9.22222,
+                                                                           "verdict":  "tie"
+                                                                       }
+                                                                   ]
+                                                      }
+                                                  ]
+                                    },
+                      "macos-clang":  {
+                                          "cpu":  "Apple M1 (Virtual)-NEON",
+                                          "os":  "macOS-25.4.0",
+                                          "compiler":  "Clang-22.1.8",
+                                          "harness":  {
+                                                          "clearCpuCachesBeforeIterations":  true,
+                                                          "measuredIterationCount":  60,
+                                                          "maxIterationCount":  3000,
+                                                          "convergenceThreshold":  1,
+                                                          "maxTimeInS":  5,
+                                                          "rseThreshold":  2.5,
+                                                          "maxK":  100000,
+                                                          "minK":  30
+                                                      },
+                                          "wtl":  {
+                                                      "fast_digit_count":  {
+                                                                               "wins":  1,
+                                                                               "ties":  7,
+                                                                               "losses":  0
+                                                                           },
+                                                      "lemire_digit_count":  {
+                                                                                 "wins":  1,
+                                                                                 "ties":  8,
+                                                                                 "losses":  0
+                                                                             },
+                                                      "rtc_digit_count":  {
+                                                                              "wins":  2,
+                                                                              "ties":  4,
+                                                                              "losses":  4
+                                                                          }
+                                                  },
+                                          "tests":  [
+                                                        {
+                                                            "name":  "uint32_t-integer_count[100000]-digit_length[0-10]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint32_t",
+                                                                           "intType":  "uint32_t",
+                                                                           "count":  100000,
+                                                                           "digitLength":  "0-10"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "fast_digit_count",
+                                                                             "mbps":  2272.34,
+                                                                             "rse":  1.09182,
+                                                                             "windowDuration":  "42.5517ms",
+                                                                             "fileSizeBytes":  549008,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  189859000,
+                                                                             "latencyNs":  230412,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "win"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "lemire_digit_count",
+                                                                             "mbps":  2154.53,
+                                                                             "rse":  1.01455,
+                                                                             "windowDuration":  "92.879ms",
+                                                                             "fileSizeBytes":  549008,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  182356000,
+                                                                             "latencyNs":  243011,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "tie"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  2061.22,
+                                                                             "rse":  2.31861,
+                                                                             "windowDuration":  "44.5648ms",
+                                                                             "fileSizeBytes":  549008,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  1040600000,
+                                                                             "latencyNs":  254012,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "tie"
+                                                                         }
+                                                                     ]
+                                                        },
+                                                        {
+                                                            "name":  "uint32_t-integer_count[10000]-digit_length[0-10]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint32_t",
+                                                                           "intType":  "uint32_t",
+                                                                           "count":  10000,
+                                                                           "digitLength":  "0-10"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "fast_digit_count",
+                                                                             "mbps":  2270.38,
+                                                                             "rse":  1.06287,
+                                                                             "windowDuration":  "4.72179ms",
+                                                                             "fileSizeBytes":  54851,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  1799090,
+                                                                             "latencyNs":  23040.2,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "tie"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  2263.4,
+                                                                             "rse":  1.31697,
+                                                                             "windowDuration":  "4.36487ms",
+                                                                             "fileSizeBytes":  54851,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  2779180,
+                                                                             "latencyNs":  23111.2,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "tie"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "lemire_digit_count",
+                                                                             "mbps":  2199.44,
+                                                                             "rse":  1.68708,
+                                                                             "windowDuration":  "4.24625ms",
+                                                                             "fileSizeBytes":  54851,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  4829870,
+                                                                             "latencyNs":  23783.3,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "tie"
+                                                                         }
+                                                                     ]
+                                                        },
+                                                        {
+                                                            "name":  "uint32_t-integer_count[1000]-digit_length[0-10]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint32_t",
+                                                                           "intType":  "uint32_t",
+                                                                           "count":  1000,
+                                                                           "digitLength":  "0-10"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "lemire_digit_count",
+                                                                             "mbps":  2279.95,
+                                                                             "rse":  0.241775,
+                                                                             "windowDuration":  "0.433166ms",
+                                                                             "fileSizeBytes":  5346,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  876.902,
+                                                                             "latencyNs":  2236.17,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "tie"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "fast_digit_count",
+                                                                             "mbps":  2257.6,
+                                                                             "rse":  0.446173,
+                                                                             "windowDuration":  "0.4415ms",
+                                                                             "fileSizeBytes":  5346,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  3045.73,
+                                                                             "latencyNs":  2258.3,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "tie"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  1961.91,
+                                                                             "rse":  2.38704,
+                                                                             "windowDuration":  "1.16292ms",
+                                                                             "fileSizeBytes":  5346,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  115437,
+                                                                             "latencyNs":  2598.67,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "loss"
+                                                                         }
+                                                                     ]
+                                                        },
+                                                        {
+                                                            "name":  "uint32_t-integer_count[100]-digit_length[0-10]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint32_t",
+                                                                           "intType":  "uint32_t",
+                                                                           "count":  100,
+                                                                           "digitLength":  "0-10"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "lemire_digit_count",
+                                                                             "mbps":  1927.64,
+                                                                             "rse":  1.08479,
+                                                                             "windowDuration":  "0.061125ms",
+                                                                             "fileSizeBytes":  494,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  210.869,
+                                                                             "latencyNs":  244.4,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "tie"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "fast_digit_count",
+                                                                             "mbps":  1916.66,
+                                                                             "rse":  1.2559,
+                                                                             "windowDuration":  "0.064709ms",
+                                                                             "fileSizeBytes":  494,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  285.89,
+                                                                             "latencyNs":  245.8,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "tie"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  1895.07,
+                                                                             "rse":  1.70155,
+                                                                             "windowDuration":  "0.058ms",
+                                                                             "fileSizeBytes":  494,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  536.8,
+                                                                             "latencyNs":  248.6,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "tie"
+                                                                         }
+                                                                     ]
+                                                        },
+                                                        {
+                                                            "name":  "uint32_t-integer_count[10]-digit_length[0-10]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint32_t",
+                                                                           "intType":  "uint32_t",
+                                                                           "count":  10,
+                                                                           "digitLength":  "0-10"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "lemire_digit_count",
+                                                                             "mbps":  1419.07,
+                                                                             "rse":  0.165027,
+                                                                             "windowDuration":  "0.1255ms",
+                                                                             "fileSizeBytes":  62,
+                                                                             "windowSamplesK":  48,
+                                                                             "variance":  0.22695,
+                                                                             "latencyNs":  41.6667,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "win"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  1335.28,
+                                                                             "rse":  2.34877,
+                                                                             "windowDuration":  "0.199167ms",
+                                                                             "fileSizeBytes":  62,
+                                                                             "windowSamplesK":  96,
+                                                                             "variance":  103.846,
+                                                                             "latencyNs":  44.2812,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "loss"
+                                                                         }
+                                                                     ]
+                                                        },
+                                                        {
+                                                            "name":  "uint64_t-integer_count[100000]-digit_length[0-20]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint64_t",
+                                                                           "intType":  "uint64_t",
+                                                                           "count":  100000,
+                                                                           "digitLength":  "0-20"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "lemire_digit_count",
+                                                                             "mbps":  4806.95,
+                                                                             "rse":  0.138819,
+                                                                             "windowDuration":  "46.6117ms",
+                                                                             "fileSizeBytes":  1049617,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  2506930,
+                                                                             "latencyNs":  208239,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "tie"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  4783.49,
+                                                                             "rse":  0.313789,
+                                                                             "windowDuration":  "38.3215ms",
+                                                                             "fileSizeBytes":  1049617,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  12935100,
+                                                                             "latencyNs":  209260,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "tie"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "fast_digit_count",
+                                                                             "mbps":  4763.86,
+                                                                             "rse":  0.453693,
+                                                                             "windowDuration":  "38.7778ms",
+                                                                             "fileSizeBytes":  1049617,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  27264000,
+                                                                             "latencyNs":  210122,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "tie"
+                                                                         }
+                                                                     ]
+                                                        },
+                                                        {
+                                                            "name":  "uint64_t-integer_count[10000]-digit_length[0-20]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint64_t",
+                                                                           "intType":  "uint64_t",
+                                                                           "count":  10000,
+                                                                           "digitLength":  "0-20"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "fast_digit_count",
+                                                                             "mbps":  4273.84,
+                                                                             "rse":  1.64806,
+                                                                             "windowDuration":  "10.785ms",
+                                                                             "fileSizeBytes":  103397,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  4337570,
+                                                                             "latencyNs":  23072.3,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "tie"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "lemire_digit_count",
+                                                                             "mbps":  4235.34,
+                                                                             "rse":  1.51392,
+                                                                             "windowDuration":  "4.39337ms",
+                                                                             "fileSizeBytes":  103397,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  3727080,
+                                                                             "latencyNs":  23282,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "tie"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  3821.13,
+                                                                             "rse":  2.06333,
+                                                                             "windowDuration":  "11.0608ms",
+                                                                             "fileSizeBytes":  103397,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  8505270,
+                                                                             "latencyNs":  25805.7,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "loss"
+                                                                         }
+                                                                     ]
+                                                        },
+                                                        {
+                                                            "name":  "uint64_t-integer_count[1000]-digit_length[0-20]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint64_t",
+                                                                           "intType":  "uint64_t",
+                                                                           "count":  1000,
+                                                                           "digitLength":  "0-20"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  4789,
+                                                                             "rse":  0.230571,
+                                                                             "windowDuration":  "0.384084ms",
+                                                                             "fileSizeBytes":  10371,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  680.271,
+                                                                             "latencyNs":  2065.27,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "win"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "lemire_digit_count",
+                                                                             "mbps":  4445.33,
+                                                                             "rse":  0.192829,
+                                                                             "windowDuration":  "0.415292ms",
+                                                                             "fileSizeBytes":  10371,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  552.202,
+                                                                             "latencyNs":  2224.93,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "tie"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "fast_digit_count",
+                                                                             "mbps":  4398.54,
+                                                                             "rse":  0.649842,
+                                                                             "windowDuration":  "1.07925ms",
+                                                                             "fileSizeBytes":  10371,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  6405.63,
+                                                                             "latencyNs":  2248.6,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "tie"
+                                                                         }
+                                                                     ]
+                                                        },
+                                                        {
+                                                            "name":  "uint64_t-integer_count[100]-digit_length[0-20]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint64_t",
+                                                                           "intType":  "uint64_t",
+                                                                           "count":  100,
+                                                                           "digitLength":  "0-20"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "fast_digit_count",
+                                                                             "mbps":  4195.53,
+                                                                             "rse":  1.65064,
+                                                                             "windowDuration":  "0.079667ms",
+                                                                             "fileSizeBytes":  1051,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  466.507,
+                                                                             "latencyNs":  238.9,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "tie"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "lemire_digit_count",
+                                                                             "mbps":  4058.8,
+                                                                             "rse":  0.514682,
+                                                                             "windowDuration":  "0.689083ms",
+                                                                             "fileSizeBytes":  1051,
+                                                                             "windowSamplesK":  96,
+                                                                             "variance":  155.081,
+                                                                             "latencyNs":  246.948,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "tie"
+                                                                         },
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  3555.14,
+                                                                             "rse":  1.16066,
+                                                                             "windowDuration":  "0.0645ms",
+                                                                             "fileSizeBytes":  1051,
+                                                                             "windowSamplesK":  30,
+                                                                             "variance":  321.237,
+                                                                             "latencyNs":  281.933,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "loss"
+                                                                         }
+                                                                     ]
+                                                        },
+                                                        {
+                                                            "name":  "uint64_t-integer_count[10]-digit_length[0-20]",
+                                                            "params":  {
+                                                                           "group":  "digit-counting-uint64_t",
+                                                                           "intType":  "uint64_t",
+                                                                           "count":  10,
+                                                                           "digitLength":  "0-20"
+                                                                       },
+                                                            "rows":  [
+                                                                         {
+                                                                             "lib":  "rtc_digit_count",
+                                                                             "mbps":  2367.74,
+                                                                             "rse":  2.49434,
+                                                                             "windowDuration":  "0.167959ms",
+                                                                             "fileSizeBytes":  111,
+                                                                             "windowSamplesK":  96,
+                                                                             "variance":  119.388,
+                                                                             "latencyNs":  44.7083,
+                                                                             "cyclesPerByte":  null,
+                                                                             "verdict":  "win"
+                                                                         }
+                                                                     ]
+                                                        }
+                                                    ]
+                                      },
+                      "macos-gcc":  {
+                                        "cpu":  "Apple M1 (Virtual)-NEON",
+                                        "os":  "macOS-25.4.0",
+                                        "compiler":  "GCC-16.1.0",
+                                        "harness":  {
+                                                        "clearCpuCachesBeforeIterations":  true,
+                                                        "measuredIterationCount":  60,
+                                                        "maxIterationCount":  3000,
+                                                        "convergenceThreshold":  1,
+                                                        "maxTimeInS":  5,
+                                                        "rseThreshold":  2.5,
+                                                        "maxK":  100000,
+                                                        "minK":  30
+                                                    },
+                                        "wtl":  {
+                                                    "fast_digit_count":  {
+                                                                             "wins":  2,
+                                                                             "ties":  3,
+                                                                             "losses":  1
+                                                                         },
+                                                    "lemire_digit_count":  {
+                                                                               "wins":  0,
+                                                                               "ties":  4,
+                                                                               "losses":  2
+                                                                           },
+                                                    "rtc_digit_count":  {
+                                                                            "wins":  0,
+                                                                            "ties":  5,
+                                                                            "losses":  1
+                                                                        }
+                                                },
+                                        "tests":  [
+                                                      {
+                                                          "name":  "uint32_t-integer_count[100000]-digit_length[0-10]",
+                                                          "params":  {
+                                                                         "group":  "digit-counting-uint32_t",
+                                                                         "intType":  "uint32_t",
+                                                                         "count":  100000,
+                                                                         "digitLength":  "0-10"
+                                                                     },
+                                                          "rows":  [
+                                                                       {
+                                                                           "lib":  "fast_digit_count",
+                                                                           "mbps":  2525.84,
+                                                                           "rse":  0.194895,
+                                                                           "windowDuration":  "37.716ms",
+                                                                           "fileSizeBytes":  549924,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  4912640,
+                                                                           "latencyNs":  207633,
+                                                                           "cyclesPerByte":  null,
+                                                                           "verdict":  "win"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "lemire_digit_count",
+                                                                           "mbps":  2486.7,
+                                                                           "rse":  0.406481,
+                                                                           "windowDuration":  "60.8929ms",
+                                                                           "fileSizeBytes":  549924,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  22047600,
+                                                                           "latencyNs":  210901,
+                                                                           "cyclesPerByte":  null,
+                                                                           "verdict":  "loss"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "rtc_digit_count",
+                                                                           "mbps":  2436.91,
+                                                                           "rse":  0.267775,
+                                                                           "windowDuration":  "38.9179ms",
+                                                                           "fileSizeBytes":  549924,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  9962980,
+                                                                           "latencyNs":  215211,
+                                                                           "cyclesPerByte":  null,
+                                                                           "verdict":  "loss"
+                                                                       }
+                                                                   ]
+                                                      },
+                                                      {
+                                                          "name":  "uint32_t-integer_count[10000]-digit_length[0-10]",
+                                                          "params":  {
+                                                                         "group":  "digit-counting-uint32_t",
+                                                                         "intType":  "uint32_t",
+                                                                         "count":  10000,
+                                                                         "digitLength":  "0-10"
+                                                                     },
+                                                          "rows":  [
+                                                                       {
+                                                                           "lib":  "rtc_digit_count",
+                                                                           "mbps":  2587.2,
+                                                                           "rse":  0.482545,
+                                                                           "windowDuration":  "3.72685ms",
+                                                                           "fileSizeBytes":  55606,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  293481,
+                                                                           "latencyNs":  20497.1,
+                                                                           "cyclesPerByte":  null,
+                                                                           "verdict":  "tie"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "fast_digit_count",
+                                                                           "mbps":  2570.08,
+                                                                           "rse":  0.427312,
+                                                                           "windowDuration":  "3.75296ms",
+                                                                           "fileSizeBytes":  55606,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  233218,
+                                                                           "latencyNs":  20633.6,
+                                                                           "cyclesPerByte":  null,
+                                                                           "verdict":  "tie"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "lemire_digit_count",
+                                                                           "mbps":  2501.79,
+                                                                           "rse":  1.31589,
+                                                                           "windowDuration":  "3.75296ms",
+                                                                           "fileSizeBytes":  55606,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  2333990,
+                                                                           "latencyNs":  21196.8,
+                                                                           "cyclesPerByte":  null,
+                                                                           "verdict":  "tie"
+                                                                       }
+                                                                   ]
+                                                      },
+                                                      {
+                                                          "name":  "uint32_t-integer_count[1000]-digit_length[0-10]",
+                                                          "params":  {
+                                                                         "group":  "digit-counting-uint32_t",
+                                                                         "intType":  "uint32_t",
+                                                                         "count":  1000,
+                                                                         "digitLength":  "0-10"
+                                                                     },
+                                                          "rows":  [
+                                                                       {
+                                                                           "lib":  "rtc_digit_count",
+                                                                           "mbps":  2569.51,
+                                                                           "rse":  1.59137,
+                                                                           "windowDuration":  "0.388864ms",
+                                                                           "fileSizeBytes":  5472,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  31336.8,
+                                                                           "latencyNs":  2030.93,
+                                                                           "cyclesPerByte":  null,
+                                                                           "verdict":  "tie"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "lemire_digit_count",
+                                                                           "mbps":  2477.14,
+                                                                           "rse":  2.14786,
+                                                                           "windowDuration":  "1.93408ms",
+                                                                           "fileSizeBytes":  5472,
+                                                                           "windowSamplesK":  48,
+                                                                           "variance":  98275,
+                                                                           "latencyNs":  2106.67,
+                                                                           "cyclesPerByte":  null,
+                                                                           "verdict":  "tie"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "fast_digit_count",
+                                                                           "mbps":  2458.47,
+                                                                           "rse":  2.35357,
+                                                                           "windowDuration":  "1.97299ms",
+                                                                           "fileSizeBytes":  5472,
+                                                                           "windowSamplesK":  48,
+                                                                           "variance":  119801,
+                                                                           "latencyNs":  2122.67,
+                                                                           "cyclesPerByte":  null,
+                                                                           "verdict":  "tie"
+                                                                       }
+                                                                   ]
+                                                      },
+                                                      {
+                                                          "name":  "uint64_t-integer_count[100000]-digit_length[0-20]",
+                                                          "params":  {
+                                                                         "group":  "digit-counting-uint64_t",
+                                                                         "intType":  "uint64_t",
+                                                                         "count":  100000,
+                                                                         "digitLength":  "0-20"
+                                                                     },
+                                                          "rows":  [
+                                                                       {
+                                                                           "lib":  "fast_digit_count",
+                                                                           "mbps":  4437.96,
+                                                                           "rse":  0.492939,
+                                                                           "windowDuration":  "43.36ms",
+                                                                           "fileSizeBytes":  1046125,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  36839100,
+                                                                           "latencyNs":  224802,
+                                                                           "cyclesPerByte":  null,
+                                                                           "verdict":  "tie"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "rtc_digit_count",
+                                                                           "mbps":  4352.86,
+                                                                           "rse":  0.894472,
+                                                                           "windowDuration":  "43.0569ms",
+                                                                           "fileSizeBytes":  1046125,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  126087000,
+                                                                           "latencyNs":  229197,
+                                                                           "cyclesPerByte":  null,
+                                                                           "verdict":  "tie"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "lemire_digit_count",
+                                                                           "mbps":  4139.85,
+                                                                           "rse":  2.04465,
+                                                                           "windowDuration":  "54.3322ms",
+                                                                           "fileSizeBytes":  1046125,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  728378000,
+                                                                           "latencyNs":  240990,
+                                                                           "cyclesPerByte":  null,
+                                                                           "verdict":  "loss"
+                                                                       }
+                                                                   ]
+                                                      },
+                                                      {
+                                                          "name":  "uint64_t-integer_count[10000]-digit_length[0-20]",
+                                                          "params":  {
+                                                                         "group":  "digit-counting-uint64_t",
+                                                                         "intType":  "uint64_t",
+                                                                         "count":  10000,
+                                                                         "digitLength":  "0-20"
+                                                                     },
+                                                          "rows":  [
+                                                                       {
+                                                                           "lib":  "fast_digit_count",
+                                                                           "mbps":  4367.7,
+                                                                           "rse":  1.47156,
+                                                                           "windowDuration":  "4.48896ms",
+                                                                           "fileSizeBytes":  105012,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  3415480,
+                                                                           "latencyNs":  22929.1,
+                                                                           "cyclesPerByte":  null,
+                                                                           "verdict":  "win"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "lemire_digit_count",
+                                                                           "mbps":  3995.92,
+                                                                           "rse":  2.28998,
+                                                                           "windowDuration":  "4.53222ms",
+                                                                           "fileSizeBytes":  105012,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  9881700,
+                                                                           "latencyNs":  25062.4,
+                                                                           "cyclesPerByte":  null,
+                                                                           "verdict":  "tie"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "rtc_digit_count",
+                                                                           "mbps":  3902.9,
+                                                                           "rse":  1.4911,
+                                                                           "windowDuration":  "4.51482ms",
+                                                                           "fileSizeBytes":  105012,
+                                                                           "windowSamplesK":  30,
+                                                                           "variance":  4391740,
+                                                                           "latencyNs":  25659.7,
+                                                                           "cyclesPerByte":  null,
+                                                                           "verdict":  "tie"
+                                                                       }
+                                                                   ]
+                                                      },
+                                                      {
+                                                          "name":  "uint64_t-integer_count[1000]-digit_length[0-20]",
+                                                          "params":  {
+                                                                         "group":  "digit-counting-uint64_t",
+                                                                         "intType":  "uint64_t",
+                                                                         "count":  1000,
+                                                                         "digitLength":  "0-20"
+                                                                     },
+                                                          "rows":  [
+                                                                       {
+                                                                           "lib":  "lemire_digit_count",
+                                                                           "mbps":  4337.14,
+                                                                           "rse":  2.10973,
+                                                                           "windowDuration":  "4.45107ms",
+                                                                           "fileSizeBytes":  10272,
+                                                                           "windowSamplesK":  96,
+                                                                           "variance":  217986,
+                                                                           "latencyNs":  2258.67,
+                                                                           "cyclesPerByte":  null,
+                                                                           "verdict":  "tie"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "rtc_digit_count",
+                                                                           "mbps":  4316.75,
+                                                                           "rse":  2.07726,
+                                                                           "windowDuration":  "4.41318ms",
+                                                                           "fileSizeBytes":  10272,
+                                                                           "windowSamplesK":  96,
+                                                                           "variance":  213330,
+                                                                           "latencyNs":  2269.33,
+                                                                           "cyclesPerByte":  null,
+                                                                           "verdict":  "tie"
+                                                                       },
+                                                                       {
+                                                                           "lib":  "fast_digit_count",
+                                                                           "mbps":  3887.36,
+                                                                           "rse":  2.12926,
+                                                                           "windowDuration":  "4.76083ms",
+                                                                           "fileSizeBytes":  10272,
+                                                                           "windowSamplesK":  96,
+                                                                           "variance":  276394,
+                                                                           "latencyNs":  2520,
+                                                                           "cyclesPerByte":  null,
+                                                                           "verdict":  "loss"
+                                                                       }
+                                                                   ]
+                                                      }
+                                                  ]
+                                    },
+                      "windows-msvc":  {
+                                           "cpu":  "Intel(R) Core(TM) i9-14900KF-AVX2",
+                                           "os":  "Windows-10.0.26200",
+                                           "compiler":  "MSVC-19.44.35228.0",
+                                           "harness":  {
+                                                           "clearCpuCachesBeforeIterations":  true,
+                                                           "measuredIterationCount":  60,
+                                                           "maxIterationCount":  3000,
+                                                           "convergenceThreshold":  1,
+                                                           "maxTimeInS":  5,
+                                                           "rseThreshold":  2.5,
+                                                           "maxK":  100000,
+                                                           "minK":  30
+                                                       },
+                                           "wtl":  {
+                                                       "lemire_digit_count":  {
+                                                                                  "wins":  1,
+                                                                                  "ties":  4,
+                                                                                  "losses":  1
+                                                                              },
+                                                       "rtc_digit_count":  {
+                                                                               "wins":  1,
+                                                                               "ties":  4,
+                                                                               "losses":  1
+                                                                           }
+                                                   },
+                                           "tests":  [
+                                                         {
+                                                             "name":  "uint32_t-integer_count[100000]-digit_length[0-10]",
+                                                             "params":  {
+                                                                            "group":  "digit-counting-uint32_t",
+                                                                            "intType":  "uint32_t",
+                                                                            "count":  100000,
+                                                                            "digitLength":  "0-10"
+                                                                        },
+                                                             "rows":  [
+                                                                          {
+                                                                              "lib":  "rtc_digit_count",
+                                                                              "mbps":  4592.3,
+                                                                              "rse":  0.732932,
+                                                                              "windowDuration":  "21.1705ms",
+                                                                              "fileSizeBytes":  548905,
+                                                                              "windowSamplesK":  30,
+                                                                              "variance":  20940200,
+                                                                              "latencyNs":  113990,
+                                                                              "cyclesPerByte":  0.661606,
+                                                                              "verdict":  "tie"
+                                                                          },
+                                                                          {
+                                                                              "lib":  "lemire_digit_count",
+                                                                              "mbps":  4547.75,
+                                                                              "rse":  0.74389,
+                                                                              "windowDuration":  "21.0772ms",
+                                                                              "fileSizeBytes":  548905,
+                                                                              "windowSamplesK":  30,
+                                                                              "variance":  21995800,
+                                                                              "latencyNs":  115107,
+                                                                              "cyclesPerByte":  0.668014,
+                                                                              "verdict":  "tie"
+                                                                          }
+                                                                      ]
+                                                         },
+                                                         {
+                                                             "name":  "uint32_t-integer_count[10000]-digit_length[0-10]",
+                                                             "params":  {
+                                                                            "group":  "digit-counting-uint32_t",
+                                                                            "intType":  "uint32_t",
+                                                                            "count":  10000,
+                                                                            "digitLength":  "0-10"
+                                                                        },
+                                                             "rows":  [
+                                                                          {
+                                                                              "lib":  "lemire_digit_count",
+                                                                              "mbps":  4689.42,
+                                                                              "rse":  0.0655668,
+                                                                              "windowDuration":  "2.1441ms",
+                                                                              "fileSizeBytes":  55122,
+                                                                              "windowSamplesK":  30,
+                                                                              "variance":  1620.69,
+                                                                              "latencyNs":  11210,
+                                                                              "cyclesPerByte":  0.646254,
+                                                                              "verdict":  "win"
+                                                                          },
+                                                                          {
+                                                                              "lib":  "rtc_digit_count",
+                                                                              "mbps":  4581.13,
+                                                                              "rse":  1.0621,
+                                                                              "windowDuration":  "10.6427ms",
+                                                                              "fileSizeBytes":  55122,
+                                                                              "windowSamplesK":  48,
+                                                                              "variance":  712979,
+                                                                              "latencyNs":  11475,
+                                                                              "cyclesPerByte":  0.661784,
+                                                                              "verdict":  "loss"
+                                                                          }
+                                                                      ]
+                                                         },
+                                                         {
+                                                             "name":  "uint32_t-integer_count[1000]-digit_length[0-10]",
+                                                             "params":  {
+                                                                            "group":  "digit-counting-uint32_t",
+                                                                            "intType":  "uint32_t",
+                                                                            "count":  1000,
+                                                                            "digitLength":  "0-10"
+                                                                        },
+                                                             "rows":  [
+                                                                          {
+                                                                              "lib":  "lemire_digit_count",
+                                                                              "mbps":  4183.2,
+                                                                              "rse":  0.742781,
+                                                                              "windowDuration":  "0.2729ms",
+                                                                              "fileSizeBytes":  5483,
+                                                                              "windowSamplesK":  30,
+                                                                              "variance":  2586.21,
+                                                                              "latencyNs":  1250,
+                                                                              "cyclesPerByte":  0.718974,
+                                                                              "verdict":  "tie"
+                                                                          },
+                                                                          {
+                                                                              "lib":  "rtc_digit_count",
+                                                                              "mbps":  4150,
+                                                                              "rse":  0.721998,
+                                                                              "windowDuration":  "0.2513ms",
+                                                                              "fileSizeBytes":  5483,
+                                                                              "windowSamplesK":  30,
+                                                                              "variance":  2482.76,
+                                                                              "latencyNs":  1260,
+                                                                              "cyclesPerByte":  0.716524,
+                                                                              "verdict":  "tie"
+                                                                          }
+                                                                      ]
+                                                         },
+                                                         {
+                                                             "name":  "uint32_t-integer_count[100]-digit_length[0-10]",
+                                                             "params":  {
+                                                                            "group":  "digit-counting-uint32_t",
+                                                                            "intType":  "uint32_t",
+                                                                            "count":  100,
+                                                                            "digitLength":  "0-10"
+                                                                        },
+                                                             "rows":  [
+                                                                          {
+                                                                              "lib":  "lemire_digit_count",
+                                                                              "mbps":  2233.44,
+                                                                              "rse":  2.24132,
+                                                                              "windowDuration":  "0.1652ms",
+                                                                              "fileSizeBytes":  484,
+                                                                              "windowSamplesK":  30,
+                                                                              "variance":  643.678,
+                                                                              "latencyNs":  206.667,
+                                                                              "cyclesPerByte":  0.892631,
+                                                                              "verdict":  "tie"
+                                                                          },
+                                                                          {
+                                                                              "lib":  "fast_digit_count",
+                                                                              "mbps":  2233.44,
+                                                                              "rse":  2.24132,
+                                                                              "windowDuration":  "0.1214ms",
+                                                                              "fileSizeBytes":  484,
+                                                                              "windowSamplesK":  30,
+                                                                              "variance":  643.678,
+                                                                              "latencyNs":  206.667,
+                                                                              "cyclesPerByte":  0.858953,
+                                                                              "verdict":  "tie"
+                                                                          },
+                                                                          {
+                                                                              "lib":  "rtc_digit_count",
+                                                                              "mbps":  2051.46,
+                                                                              "rse":  1.9745,
+                                                                              "windowDuration":  "0.5066ms",
+                                                                              "fileSizeBytes":  484,
+                                                                              "windowSamplesK":  96,
+                                                                              "variance":  1894.74,
+                                                                              "latencyNs":  225,
+                                                                              "cyclesPerByte":  0.95814,
+                                                                              "verdict":  "loss"
+                                                                          }
+                                                                      ]
+                                                         },
+                                                         {
+                                                             "name":  "uint64_t-integer_count[100000]-digit_length[0-20]",
+                                                             "params":  {
+                                                                            "group":  "digit-counting-uint64_t",
+                                                                            "intType":  "uint64_t",
+                                                                            "count":  100000,
+                                                                            "digitLength":  "0-20"
+                                                                        },
+                                                             "rows":  [
+                                                                          {
+                                                                              "lib":  "rtc_digit_count",
+                                                                              "mbps":  8538.9,
+                                                                              "rse":  1.29209,
+                                                                              "windowDuration":  "21.2774ms",
+                                                                              "fileSizeBytes":  1046984,
+                                                                              "windowSamplesK":  30,
+                                                                              "variance":  68483000,
+                                                                              "latencyNs":  116933,
+                                                                              "cyclesPerByte":  0.355775,
+                                                                              "verdict":  "tie"
+                                                                          },
+                                                                          {
+                                                                              "lib":  "lemire_digit_count",
+                                                                              "mbps":  8453.11,
+                                                                              "rse":  1.04044,
+                                                                              "windowDuration":  "21.6437ms",
+                                                                              "fileSizeBytes":  1046984,
+                                                                              "windowSamplesK":  30,
+                                                                              "variance":  45310600,
+                                                                              "latencyNs":  118120,
+                                                                              "cyclesPerByte":  0.359426,
+                                                                              "verdict":  "tie"
+                                                                          }
+                                                                      ]
+                                                         },
+                                                         {
+                                                             "name":  "uint64_t-integer_count[10000]-digit_length[0-20]",
+                                                             "params":  {
+                                                                            "group":  "digit-counting-uint64_t",
+                                                                            "intType":  "uint64_t",
+                                                                            "count":  10000,
+                                                                            "digitLength":  "0-20"
+                                                                        },
+                                                             "rows":  [
+                                                                          {
+                                                                              "lib":  "rtc_digit_count",
+                                                                              "mbps":  8855.41,
+                                                                              "rse":  0.543374,
+                                                                              "windowDuration":  "2.2542ms",
+                                                                              "fileSizeBytes":  104927,
+                                                                              "windowSamplesK":  30,
+                                                                              "variance":  113103,
+                                                                              "latencyNs":  11300,
+                                                                              "cyclesPerByte":  0.342558,
+                                                                              "verdict":  "win"
+                                                                          },
+                                                                          {
+                                                                              "lib":  "lemire_digit_count",
+                                                                              "mbps":  8513.86,
+                                                                              "rse":  1.57188,
+                                                                              "windowDuration":  "2.3213ms",
+                                                                              "fileSizeBytes":  104927,
+                                                                              "windowSamplesK":  30,
+                                                                              "variance":  1023950,
+                                                                              "latencyNs":  11753.3,
+                                                                              "cyclesPerByte":  0.355699,
+                                                                              "verdict":  "loss"
+                                                                          }
+                                                                      ]
+                                                         },
+                                                         {
+                                                             "name":  "uint64_t-integer_count[1000]-digit_length[0-20]",
+                                                             "params":  {
+                                                                            "group":  "digit-counting-uint64_t",
+                                                                            "intType":  "uint64_t",
+                                                                            "count":  1000,
+                                                                            "digitLength":  "0-20"
+                                                                        },
+                                                             "rows":  [
+                                                                          {
+                                                                              "lib":  "lemire_digit_count",
+                                                                              "mbps":  8630.05,
+                                                                              "rse":  0.787263,
+                                                                              "windowDuration":  "0.5748ms",
+                                                                              "fileSizeBytes":  10286,
+                                                                              "windowSamplesK":  30,
+                                                                              "variance":  2402.3,
+                                                                              "latencyNs":  1136.67,
+                                                                              "cyclesPerByte":  0.34651,
+                                                                              "verdict":  "tie"
+                                                                          },
+                                                                          {
+                                                                              "lib":  "rtc_digit_count",
+                                                                              "mbps":  8529.99,
+                                                                              "rse":  0.807371,
+                                                                              "windowDuration":  "0.5992ms",
+                                                                              "fileSizeBytes":  10286,
+                                                                              "windowSamplesK":  30,
+                                                                              "variance":  2586.21,
+                                                                              "latencyNs":  1150,
+                                                                              "cyclesPerByte":  0.346682,
+                                                                              "verdict":  "tie"
+                                                                          }
+                                                                      ]
+                                                         },
+                                                         {
+                                                             "name":  "uint64_t-integer_count[100]-digit_length[0-20]",
+                                                             "params":  {
+                                                                            "group":  "digit-counting-uint64_t",
+                                                                            "intType":  "uint64_t",
+                                                                            "count":  100,
+                                                                            "digitLength":  "0-20"
+                                                                        },
+                                                             "rows":  [
+                                                                          {
+                                                                              "lib":  "rtc_digit_count",
+                                                                              "mbps":  5015.71,
+                                                                              "rse":  1.82236,
+                                                                              "windowDuration":  "0.2263ms",
+                                                                              "fileSizeBytes":  1019,
+                                                                              "windowSamplesK":  48,
+                                                                              "variance":  598.404,
+                                                                              "latencyNs":  193.75,
+                                                                              "cyclesPerByte":  0.37269,
+                                                                              "verdict":  "tie"
+                                                                          },
+                                                                          {
+                                                                              "lib":  "fast_digit_count",
+                                                                              "mbps":  4779.32,
+                                                                              "rse":  1.63934,
+                                                                              "windowDuration":  "0.0657ms",
+                                                                              "fileSizeBytes":  1019,
+                                                                              "windowSamplesK":  30,
+                                                                              "variance":  333.333,
+                                                                              "latencyNs":  203.333,
+                                                                              "cyclesPerByte":  0.410697,
+                                                                              "verdict":  "tie"
+                                                                          },
+                                                                          {
+                                                                              "lib":  "lemire_digit_count",
+                                                                              "mbps":  4021.22,
+                                                                              "rse":  2.09302,
+                                                                              "windowDuration":  "0.5638ms",
+                                                                              "fileSizeBytes":  1019,
+                                                                              "windowSamplesK":  96,
+                                                                              "variance":  2456.14,
+                                                                              "latencyNs":  241.667,
+                                                                              "cyclesPerByte":  0.487355,
+                                                                              "verdict":  "loss"
+                                                                          }
+                                                                      ]
+                                                         }
+                                                     ]
+                                       }
+                  }
+}
