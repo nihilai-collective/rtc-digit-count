@@ -1,0 +1,4 @@
+Library,Throughput (MB/s),RSE (%),Time (ms),Bytes Processed,Measured Sample Size,Variance,Mean,Converged,Position
+rtc_digit_count,139.989,0.479113,0.028187ms,4,12,0.204545,27.25,true,Win
+lemire_digit_count,137.881,0.513737,0.036342ms,4,12,0.242424,27.6667,true,Loss
+fast_digit_count,130.046,0.640996,0.031902ms,4,12,0.424242,29.3333,true,Loss

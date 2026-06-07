@@ -1,0 +1,9 @@
+#  Stage Results
+#**CPU:** Apple M1 (Virtual)
+#**OS:** macOS-24.6.0
+#**Compiler:** GCC-15.2.0
+
+Library,Wins,Ties,Losses
+fast_digit_count,3,0,0
+lemire_digit_count,0,1,1
+rtc_digit_count,0,1,1
