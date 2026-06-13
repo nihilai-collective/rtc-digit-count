@@ -1,0 +1,9 @@
+# digit-counting-uint32_t Stage Results
+#**CPU:** AMD EPYC 7763 64-Core Processor
+#**OS:** Linux-6.17.0-1018-azure
+#**Compiler:** Clang-23.0.0
+
+Library,Average Throughput (MB/s),Average Throughput Deviation (%),Average Bytes Processed,Average Measured Executions,Average Iterations to Stabilize,Wins,Ties,Losses
+rtc-digit-count-32,1798.43,1.56075,101856,60,222.5,1,5,0
+lemire-digit-count-32,1661.51,2.02655,101828,60,93,0,4,2
+fast-digit-count-32,1733.52,1.5572,101862,60,273,0,3,3

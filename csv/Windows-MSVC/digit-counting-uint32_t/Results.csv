@@ -1,0 +1,9 @@
+# digit-counting-uint32_t Stage Results
+#**CPU:** AMD EPYC 7763 64-Core Processor
+#**OS:** Windows-10.0.26100
+#**Compiler:** MSVC-19.51.36246.0
+
+Library,Average Throughput (MB/s),Average Throughput Deviation (%),Average Bytes Processed,Average Measured Executions,Average Iterations to Stabilize,Wins,Ties,Losses
+rtc-digit-count-32,2101.83,2.2135,101850,60,107.833,3,3,0
+fast-digit-count-32,1934.7,2.10875,101849,60,184.167,0,3,3
+lemire-digit-count-32,1778.66,2.58867,101852,60,172.5,0,3,3

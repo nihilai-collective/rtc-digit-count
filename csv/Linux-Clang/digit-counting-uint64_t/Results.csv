@@ -1,0 +1,9 @@
+# digit-counting-uint64_t Stage Results
+#**CPU:** AMD EPYC 7763 64-Core Processor
+#**OS:** Linux-6.17.0-1018-azure
+#**Compiler:** Clang-23.0.0
+
+Library,Average Throughput (MB/s),Average Throughput Deviation (%),Average Bytes Processed,Average Measured Executions,Average Iterations to Stabilize,Wins,Ties,Losses
+fast-digit-count-64,3550.63,2.03638,193545,60,251,3,3,0
+lemire-digit-count-64,2800.75,2.04016,193516,60,69.8333,0,1,5
+rtc-digit-count-64,3372.97,1.94617,193546,60,188.167,0,3,3
