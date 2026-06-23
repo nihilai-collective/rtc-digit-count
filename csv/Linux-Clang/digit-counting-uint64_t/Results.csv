@@ -1,0 +1,9 @@
+#  Stage Results
+#**CPU:** AMD EPYC 9V74 80-Core Processor
+#**OS:** Linux-6.17.0-1018-azure
+#**Compiler:** Clang-23.0.0
+
+Library,Wins,Ties,Losses
+rtc_digit_count,4,2,0
+fast_digit_count,0,2,4
+lemire_digit_count,0,1,5
