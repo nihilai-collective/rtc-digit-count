@@ -1,0 +1,1739 @@
+{
+  "library": "rtc-digit-count",
+  "branch": "main",
+  "generatedAt": "2026-09-01T19:42:35.5599904Z",
+  "summary": {
+    "rtc_digit_count": {
+      "wins": 26,
+      "ties": 12,
+      "losses": 7
+    },
+    "lemire_digit_count": {
+      "wins": 7,
+      "ties": 12,
+      "losses": 26
+    }
+  },
+  "platforms": {
+    "linux-clang": {
+      "cpu": "Intel(R) Core(TM) i9-14900KF-AVX2",
+      "os": "Linux-6.18.33.2-microsoft-standard-WSL2",
+      "compiler": "Clang-24.0.0",
+      "harness": {
+        "clearCpuCachesBeforeIterations": true,
+        "measuredIterationCount": 60,
+        "maxIterationCount": 1200,
+        "convergenceThreshold": 1.0,
+        "maxTimeInS": 5.0,
+        "rseThreshold": 2.5,
+        "maxK": 100000,
+        "minK": 30
+      },
+      "wtl": {
+        "rtc_digit_count": {
+          "wins": 6,
+          "ties": 2,
+          "losses": 2
+        },
+        "lemire_digit_count": {
+          "wins": 2,
+          "ties": 2,
+          "losses": 6
+        }
+      },
+      "tests": [
+        {
+          "name": "uint32_t-integer_count[10]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 10,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 1498.88,
+              "rse": 0.341283,
+              "windowDuration": "264.462ms",
+              "fileSizeBytes": 57,
+              "windowSamplesK": 30,
+              "variance": 0.465517,
+              "latencyNs": 36.5,
+              "cyclesPerByte": 0.567693,
+              "verdict": "win"
+            },
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 1481.29,
+              "rse": 0.316218,
+              "windowDuration": "219.851ms",
+              "fileSizeBytes": 57,
+              "windowSamplesK": 30,
+              "variance": 0.409195,
+              "latencyNs": 36.9333,
+              "cyclesPerByte": 0.535154,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint32_t-integer_count[100]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 100,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 3671.1,
+              "rse": 0.0869429,
+              "windowDuration": "21.8949ms",
+              "fileSizeBytes": 548,
+              "windowSamplesK": 30,
+              "variance": 0.46092,
+              "latencyNs": 142.567,
+              "cyclesPerByte": 0.720117,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 3592.97,
+              "rse": 0.0760142,
+              "windowDuration": "22.5033ms",
+              "fileSizeBytes": 548,
+              "windowSamplesK": 30,
+              "variance": 0.367816,
+              "latencyNs": 145.667,
+              "cyclesPerByte": 0.737184,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint32_t-integer_count[1000]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 1000,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 4530.19,
+              "rse": 0.618763,
+              "windowDuration": "0.560162ms",
+              "fileSizeBytes": 5513,
+              "windowSamplesK": 30,
+              "variance": 1547.51,
+              "latencyNs": 1160.73,
+              "cyclesPerByte": 0.660287,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 4311.64,
+              "rse": 1.16618,
+              "windowDuration": "0.530719ms",
+              "fileSizeBytes": 5513,
+              "windowSamplesK": 30,
+              "variance": 6068.25,
+              "latencyNs": 1219.57,
+              "cyclesPerByte": 0.694232,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint32_t-integer_count[10000]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 10000,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 4206.24,
+              "rse": 0.615402,
+              "windowDuration": "5.48378ms",
+              "fileSizeBytes": 55054,
+              "windowSamplesK": 30,
+              "variance": 177023.0,
+              "latencyNs": 12482.3,
+              "cyclesPerByte": 0.720295,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 3734.54,
+              "rse": 0.533118,
+              "windowDuration": "13.3115ms",
+              "fileSizeBytes": 55070,
+              "windowSamplesK": 48,
+              "variance": 269803.0,
+              "latencyNs": 14063.0,
+              "cyclesPerByte": 0.81248,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint32_t-integer_count[100000]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 100000,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 4050.18,
+              "rse": 0.936706,
+              "windowDuration": "23.1988ms",
+              "fileSizeBytes": 549943,
+              "windowSamplesK": 30,
+              "variance": 44138400.0,
+              "latencyNs": 129492.0,
+              "cyclesPerByte": 0.749583,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 3534.58,
+              "rse": 0.382117,
+              "windowDuration": "26.3518ms",
+              "fileSizeBytes": 549943,
+              "windowSamplesK": 30,
+              "variance": 9644400.0,
+              "latencyNs": 148382.0,
+              "cyclesPerByte": 0.859406,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint64_t-integer_count[10]-digit_length[0-20]",
+          "params": {
+            "group": "digit-counting-uint64_t",
+            "intType": "uint64_t",
+            "count": 10,
+            "digitLength": "0-20"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 2614.83,
+              "rse": 0.240241,
+              "windowDuration": "282.393ms",
+              "fileSizeBytes": 100,
+              "windowSamplesK": 30,
+              "variance": 0.234483,
+              "latencyNs": 36.8,
+              "cyclesPerByte": 0.309547,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 2534.48,
+              "rse": 0.295716,
+              "windowDuration": "220.973ms",
+              "fileSizeBytes": 100,
+              "windowSamplesK": 30,
+              "variance": 0.378161,
+              "latencyNs": 37.9667,
+              "cyclesPerByte": 0.382557,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint64_t-integer_count[100]-digit_length[0-20]",
+          "params": {
+            "group": "digit-counting-uint64_t",
+            "intType": "uint64_t",
+            "count": 100,
+            "digitLength": "0-20"
+          },
+          "rows": [
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 6932.49,
+              "rse": 0.113329,
+              "windowDuration": "33.2038ms",
+              "fileSizeBytes": 1042,
+              "windowSamplesK": 30,
+              "variance": 0.791954,
+              "latencyNs": 143.367,
+              "cyclesPerByte": 0.3826,
+              "verdict": "win"
+            },
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 6691.34,
+              "rse": 1.15295,
+              "windowDuration": "33.5671ms",
+              "fileSizeBytes": 1042,
+              "windowSamplesK": 30,
+              "variance": 87.9816,
+              "latencyNs": 148.533,
+              "cyclesPerByte": 0.396674,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint64_t-integer_count[1000]-digit_length[0-20]",
+          "params": {
+            "group": "digit-counting-uint64_t",
+            "intType": "uint64_t",
+            "count": 1000,
+            "digitLength": "0-20"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 7919.77,
+              "rse": 1.44668,
+              "windowDuration": "0.584538ms",
+              "fileSizeBytes": 10508,
+              "windowSamplesK": 30,
+              "variance": 10054.2,
+              "latencyNs": 1265.43,
+              "cyclesPerByte": 0.377935,
+              "verdict": "tie"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 7729.6,
+              "rse": 1.30964,
+              "windowDuration": "0.573485ms",
+              "fileSizeBytes": 10508,
+              "windowSamplesK": 30,
+              "variance": 8649.98,
+              "latencyNs": 1296.57,
+              "cyclesPerByte": 0.38753,
+              "verdict": "tie"
+            }
+          ]
+        },
+        {
+          "name": "uint64_t-integer_count[10000]-digit_length[0-20]",
+          "params": {
+            "group": "digit-counting-uint64_t",
+            "intType": "uint64_t",
+            "count": 10000,
+            "digitLength": "0-20"
+          },
+          "rows": [
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 7800.31,
+              "rse": 0.764038,
+              "windowDuration": "2.46663ms",
+              "fileSizeBytes": 105015,
+              "windowSamplesK": 30,
+              "variance": 288691.0,
+              "latencyNs": 12839.3,
+              "cyclesPerByte": 0.388127,
+              "verdict": "tie"
+            },
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 7749.47,
+              "rse": 0.549308,
+              "windowDuration": "2.45614ms",
+              "fileSizeBytes": 105015,
+              "windowSamplesK": 30,
+              "variance": 151187.0,
+              "latencyNs": 12923.5,
+              "cyclesPerByte": 0.391211,
+              "verdict": "tie"
+            }
+          ]
+        },
+        {
+          "name": "uint64_t-integer_count[100000]-digit_length[0-20]",
+          "params": {
+            "group": "digit-counting-uint64_t",
+            "intType": "uint64_t",
+            "count": 100000,
+            "digitLength": "0-20"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 7758.49,
+              "rse": 1.18551,
+              "windowDuration": "23.5111ms",
+              "fileSizeBytes": 1049729,
+              "windowSamplesK": 30,
+              "variance": 70198900.0,
+              "latencyNs": 129033.0,
+              "cyclesPerByte": 0.391175,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 7412.48,
+              "rse": 1.46081,
+              "windowDuration": "23.9118ms",
+              "fileSizeBytes": 1049729,
+              "windowSamplesK": 30,
+              "variance": 116772000.0,
+              "latencyNs": 135056.0,
+              "cyclesPerByte": 0.409419,
+              "verdict": "loss"
+            }
+          ]
+        }
+      ]
+    },
+    "linux-gcc": {
+      "cpu": "Intel(R) Core(TM) i9-14900KF-AVX2",
+      "os": "Linux-6.18.33.2-microsoft-standard-WSL2",
+      "compiler": "GCC-16.1.0",
+      "harness": {
+        "clearCpuCachesBeforeIterations": true,
+        "measuredIterationCount": 60,
+        "maxIterationCount": 1200,
+        "convergenceThreshold": 1.0,
+        "maxTimeInS": 5.0,
+        "rseThreshold": 2.5,
+        "maxK": 100000,
+        "minK": 30
+      },
+      "wtl": {
+        "lemire_digit_count": {
+          "wins": 3,
+          "ties": 4,
+          "losses": 3
+        },
+        "rtc_digit_count": {
+          "wins": 3,
+          "ties": 4,
+          "losses": 3
+        }
+      },
+      "tests": [
+        {
+          "name": "uint32_t-integer_count[10]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 10,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 1395.09,
+              "rse": 0.240241,
+              "windowDuration": "265.91ms",
+              "fileSizeBytes": 53,
+              "windowSamplesK": 30,
+              "variance": 0.234483,
+              "latencyNs": 36.8,
+              "cyclesPerByte": 0.710217,
+              "verdict": "tie"
+            },
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 1390.06,
+              "rse": 0.257464,
+              "windowDuration": "267.011ms",
+              "fileSizeBytes": 53,
+              "windowSamplesK": 30,
+              "variance": 0.271264,
+              "latencyNs": 36.9333,
+              "cyclesPerByte": 0.599381,
+              "verdict": "tie"
+            }
+          ]
+        },
+        {
+          "name": "uint32_t-integer_count[100]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 100,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 3579.97,
+              "rse": 0.103314,
+              "windowDuration": "21.8861ms",
+              "fileSizeBytes": 549,
+              "windowSamplesK": 30,
+              "variance": 0.685057,
+              "latencyNs": 146.267,
+              "cyclesPerByte": 0.742776,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 3493.98,
+              "rse": 0.134724,
+              "windowDuration": "21.9062ms",
+              "fileSizeBytes": 549,
+              "windowSamplesK": 30,
+              "variance": 1.22299,
+              "latencyNs": 149.867,
+              "cyclesPerByte": 0.762931,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint32_t-integer_count[1000]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 1000,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 4269.71,
+              "rse": 0.993625,
+              "windowDuration": "0.984928ms",
+              "fileSizeBytes": 5490,
+              "windowSamplesK": 30,
+              "variance": 4453.86,
+              "latencyNs": 1226.27,
+              "cyclesPerByte": 0.700863,
+              "verdict": "win"
+            },
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 3466.2,
+              "rse": 0.292538,
+              "windowDuration": "0.602274ms",
+              "fileSizeBytes": 5479,
+              "windowSamplesK": 30,
+              "variance": 583.495,
+              "latencyNs": 1507.57,
+              "cyclesPerByte": 0.86319,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint32_t-integer_count[10000]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 10000,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 4406.03,
+              "rse": 2.17899,
+              "windowDuration": "2.23503ms",
+              "fileSizeBytes": 54964,
+              "windowSamplesK": 30,
+              "variance": 2016040.0,
+              "latencyNs": 11896.9,
+              "cyclesPerByte": 0.688116,
+              "verdict": "win"
+            },
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 4016.55,
+              "rse": 0.705012,
+              "windowDuration": "5.68114ms",
+              "fileSizeBytes": 55015,
+              "windowSamplesK": 30,
+              "variance": 254432.0,
+              "latencyNs": 13062.6,
+              "cyclesPerByte": 0.755453,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint32_t-integer_count[100000]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 100000,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 4210.74,
+              "rse": 0.917941,
+              "windowDuration": "22.6598ms",
+              "fileSizeBytes": 550148,
+              "windowSamplesK": 30,
+              "variance": 39245900.0,
+              "latencyNs": 124601.0,
+              "cyclesPerByte": 0.721231,
+              "verdict": "win"
+            },
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 3891.92,
+              "rse": 0.517535,
+              "windowDuration": "24.3044ms",
+              "fileSizeBytes": 550148,
+              "windowSamplesK": 30,
+              "variance": 14602700.0,
+              "latencyNs": 134808.0,
+              "cyclesPerByte": 0.780516,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint64_t-integer_count[10]-digit_length[0-20]",
+          "params": {
+            "group": "digit-counting-uint64_t",
+            "intType": "uint64_t",
+            "count": 10,
+            "digitLength": "0-20"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 2568.51,
+              "rse": 0.290855,
+              "windowDuration": "231.762ms",
+              "fileSizeBytes": 100,
+              "windowSamplesK": 30,
+              "variance": 0.350575,
+              "latencyNs": 37.1667,
+              "cyclesPerByte": 0.324675,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 2536.66,
+              "rse": 0.269764,
+              "windowDuration": "272.446ms",
+              "fileSizeBytes": 100,
+              "windowSamplesK": 30,
+              "variance": 0.309195,
+              "latencyNs": 37.6333,
+              "cyclesPerByte": 0.41292,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint64_t-integer_count[100]-digit_length[0-20]",
+          "params": {
+            "group": "digit-counting-uint64_t",
+            "intType": "uint64_t",
+            "count": 100,
+            "digitLength": "0-20"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 6571.24,
+              "rse": 1.94973,
+              "windowDuration": "56.0209ms",
+              "fileSizeBytes": 1047,
+              "windowSamplesK": 96,
+              "variance": 843.619,
+              "latencyNs": 152.042,
+              "cyclesPerByte": 0.336641,
+              "verdict": "tie"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 6347.28,
+              "rse": 0.515775,
+              "windowDuration": "22.194ms",
+              "fileSizeBytes": 1042,
+              "windowSamplesK": 30,
+              "variance": 19.5966,
+              "latencyNs": 156.7,
+              "cyclesPerByte": 0.422047,
+              "verdict": "tie"
+            }
+          ]
+        },
+        {
+          "name": "uint64_t-integer_count[1000]-digit_length[0-20]",
+          "params": {
+            "group": "digit-counting-uint64_t",
+            "intType": "uint64_t",
+            "count": 1000,
+            "digitLength": "0-20"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 7748.18,
+              "rse": 1.67433,
+              "windowDuration": "1.02172ms",
+              "fileSizeBytes": 10534,
+              "windowSamplesK": 30,
+              "variance": 14138.1,
+              "latencyNs": 1296.57,
+              "cyclesPerByte": 0.386645,
+              "verdict": "tie"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 7551.06,
+              "rse": 1.09435,
+              "windowDuration": "0.643684ms",
+              "fileSizeBytes": 10481,
+              "windowSamplesK": 30,
+              "variance": 6296.56,
+              "latencyNs": 1323.83,
+              "cyclesPerByte": 0.396733,
+              "verdict": "tie"
+            }
+          ]
+        },
+        {
+          "name": "uint64_t-integer_count[10000]-digit_length[0-20]",
+          "params": {
+            "group": "digit-counting-uint64_t",
+            "intType": "uint64_t",
+            "count": 10000,
+            "digitLength": "0-20"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 7780.61,
+              "rse": 0.4598,
+              "windowDuration": "2.54965ms",
+              "fileSizeBytes": 105044,
+              "windowSamplesK": 30,
+              "variance": 105143.0,
+              "latencyNs": 12875.4,
+              "cyclesPerByte": 0.38972,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 7565.28,
+              "rse": 0.908009,
+              "windowDuration": "2.46761ms",
+              "fileSizeBytes": 105044,
+              "windowSamplesK": 30,
+              "variance": 433709.0,
+              "latencyNs": 13241.8,
+              "cyclesPerByte": 0.399442,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint64_t-integer_count[100000]-digit_length[0-20]",
+          "params": {
+            "group": "digit-counting-uint64_t",
+            "intType": "uint64_t",
+            "count": 100000,
+            "digitLength": "0-20"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 7719.45,
+              "rse": 1.00341,
+              "windowDuration": "23.5618ms",
+              "fileSizeBytes": 1050353,
+              "windowSamplesK": 30,
+              "variance": 50860400.0,
+              "latencyNs": 129762.0,
+              "cyclesPerByte": 0.393105,
+              "verdict": "tie"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 7536.72,
+              "rse": 1.30387,
+              "windowDuration": "23.9038ms",
+              "fileSizeBytes": 1050353,
+              "windowSamplesK": 30,
+              "variance": 90093600.0,
+              "latencyNs": 132909.0,
+              "cyclesPerByte": 0.402625,
+              "verdict": "tie"
+            }
+          ]
+        }
+      ]
+    },
+    "macos-clang": {
+      "cpu": "Apple M1 (Virtual)-NEON",
+      "os": "macOS-25.5.0",
+      "compiler": "Clang-22.1.8",
+      "harness": {
+        "clearCpuCachesBeforeIterations": true,
+        "measuredIterationCount": 60,
+        "maxIterationCount": 1200,
+        "convergenceThreshold": 1.0,
+        "maxTimeInS": 5.0,
+        "rseThreshold": 2.5,
+        "maxK": 100000,
+        "minK": 30
+      },
+      "wtl": {
+        "lemire_digit_count": {
+          "wins": 2,
+          "ties": 0,
+          "losses": 5
+        },
+        "rtc_digit_count": {
+          "wins": 5,
+          "ties": 0,
+          "losses": 2
+        }
+      },
+      "tests": [
+        {
+          "name": "uint32_t-integer_count[10]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 10,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 711.459,
+              "rse": 2.14229,
+              "windowDuration": "1162.55ms",
+              "fileSizeBytes": 55,
+              "windowSamplesK": 98304,
+              "variance": 245655.0,
+              "latencyNs": 73.7905,
+              "cyclesPerByte": null,
+              "verdict": "win"
+            },
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 671.035,
+              "rse": 2.45828,
+              "windowDuration": "54.8754ms",
+              "fileSizeBytes": 56,
+              "windowSamplesK": 96,
+              "variance": 374.196,
+              "latencyNs": 80.3125,
+              "cyclesPerByte": null,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint32_t-integer_count[100]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 100,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 2134.84,
+              "rse": 1.08479,
+              "windowDuration": "6.97054ms",
+              "fileSizeBytes": 547,
+              "windowSamplesK": 30,
+              "variance": 210.869,
+              "latencyNs": 244.4,
+              "cyclesPerByte": null,
+              "verdict": "win"
+            },
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 2009.07,
+              "rse": 2.26214,
+              "windowDuration": "4.24625ms",
+              "fileSizeBytes": 547,
+              "windowSamplesK": 30,
+              "variance": 1035.39,
+              "latencyNs": 259.7,
+              "cyclesPerByte": null,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint32_t-integer_count[1000]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 1000,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 1605.38,
+              "rse": 1.42226,
+              "windowDuration": "58.3764ms",
+              "fileSizeBytes": 5503,
+              "windowSamplesK": 768,
+              "variance": 1660460.0,
+              "latencyNs": 3269.31,
+              "cyclesPerByte": null,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 1083.39,
+              "rse": 2.28737,
+              "windowDuration": "623.831ms",
+              "fileSizeBytes": 5498,
+              "windowSamplesK": 5862,
+              "variance": 71854900.0,
+              "latencyNs": 4840.26,
+              "cyclesPerByte": null,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint32_t-integer_count[10000]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 10000,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 1763.73,
+              "rse": 1.77851,
+              "windowDuration": "5.5705ms",
+              "fileSizeBytes": 55029,
+              "windowSamplesK": 30,
+              "variance": 8401740.0,
+              "latencyNs": 29755.5,
+              "cyclesPerByte": null,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 1145.63,
+              "rse": 1.15599,
+              "windowDuration": "251.626ms",
+              "fileSizeBytes": 54981,
+              "windowSamplesK": 192,
+              "variance": 53746500.0,
+              "latencyNs": 45768.9,
+              "cyclesPerByte": null,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint64_t-integer_count[100]-digit_length[0-20]",
+          "params": {
+            "group": "digit-counting-uint64_t",
+            "intType": "uint64_t",
+            "count": 100,
+            "digitLength": "0-20"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 1030.93,
+              "rse": 2.21107,
+              "windowDuration": "1620.93ms",
+              "fileSizeBytes": 1049,
+              "windowSamplesK": 21702,
+              "variance": 10006900.0,
+              "latencyNs": 971.179,
+              "cyclesPerByte": null,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 923.589,
+              "rse": 2.4073,
+              "windowDuration": "1071.06ms",
+              "fileSizeBytes": 1049,
+              "windowSamplesK": 24576,
+              "variance": 16732300.0,
+              "latencyNs": 1083.91,
+              "cyclesPerByte": null,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint64_t-integer_count[1000]-digit_length[0-20]",
+          "params": {
+            "group": "digit-counting-uint64_t",
+            "intType": "uint64_t",
+            "count": 1000,
+            "digitLength": "0-20"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 2097.28,
+              "rse": 2.01697,
+              "windowDuration": "77.3857ms",
+              "fileSizeBytes": 10496,
+              "windowSamplesK": 768,
+              "variance": 7117910.0,
+              "latencyNs": 4773.04,
+              "cyclesPerByte": null,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 1975.23,
+              "rse": 0.986991,
+              "windowDuration": "1298.83ms",
+              "fileSizeBytes": 10496,
+              "windowSamplesK": 5862,
+              "variance": 14665300.0,
+              "latencyNs": 5067.68,
+              "cyclesPerByte": null,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint64_t-integer_count[100000]-digit_length[0-20]",
+          "params": {
+            "group": "digit-counting-uint64_t",
+            "intType": "uint64_t",
+            "count": 100000,
+            "digitLength": "0-20"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 2610.94,
+              "rse": 1.58637,
+              "windowDuration": "73.7565ms",
+              "fileSizeBytes": 1049715,
+              "windowSamplesK": 30,
+              "variance": 1109890000.0,
+              "latencyNs": 383421.0,
+              "cyclesPerByte": null,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 843.372,
+              "rse": 2.111,
+              "windowDuration": "556.4ms",
+              "fileSizeBytes": 1050405,
+              "windowSamplesK": 30,
+              "variance": 18861500000.0,
+              "latencyNs": 1187790.0,
+              "cyclesPerByte": null,
+              "verdict": "loss"
+            }
+          ]
+        }
+      ]
+    },
+    "macos-gcc": {
+      "cpu": "Apple M1 (Virtual)-NEON",
+      "os": "macOS-25.5.0",
+      "compiler": "GCC-16.1.0",
+      "harness": {
+        "clearCpuCachesBeforeIterations": true,
+        "measuredIterationCount": 60,
+        "maxIterationCount": 1200,
+        "convergenceThreshold": 1.0,
+        "maxTimeInS": 5.0,
+        "rseThreshold": 2.5,
+        "maxK": 100000,
+        "minK": 30
+      },
+      "wtl": {
+        "rtc_digit_count": {
+          "wins": 7,
+          "ties": 1,
+          "losses": 0
+        },
+        "lemire_digit_count": {
+          "wins": 0,
+          "ties": 1,
+          "losses": 7
+        }
+      },
+      "tests": [
+        {
+          "name": "uint32_t-integer_count[10]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 10,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 1151.32,
+              "rse": 2.18561,
+              "windowDuration": "186.507ms",
+              "fileSizeBytes": 54,
+              "windowSamplesK": 49152,
+              "variance": 48686.1,
+              "latencyNs": 45.5365,
+              "cyclesPerByte": null,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 987.344,
+              "rse": 2.49881,
+              "windowDuration": "755.491ms",
+              "fileSizeBytes": 54,
+              "windowSamplesK": 49152,
+              "variance": 86532.9,
+              "latencyNs": 53.099,
+              "cyclesPerByte": null,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint32_t-integer_count[100]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 100,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 1960.4,
+              "rse": 1.70154,
+              "windowDuration": "107.719ms",
+              "fileSizeBytes": 549,
+              "windowSamplesK": 12288,
+              "variance": 254613.0,
+              "latencyNs": 267.521,
+              "cyclesPerByte": null,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 1342.44,
+              "rse": 2.4305,
+              "windowDuration": "132.371ms",
+              "fileSizeBytes": 549,
+              "windowSamplesK": 12288,
+              "variance": 1107860.0,
+              "latencyNs": 390.667,
+              "cyclesPerByte": null,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint32_t-integer_count[1000]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 1000,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 2155.85,
+              "rse": 2.43017,
+              "windowDuration": "4.89088ms",
+              "fileSizeBytes": 5485,
+              "windowSamplesK": 96,
+              "variance": 333860.0,
+              "latencyNs": 2426.67,
+              "cyclesPerByte": null,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 2009.77,
+              "rse": 2.28881,
+              "windowDuration": "10.3022ms",
+              "fileSizeBytes": 5498,
+              "windowSamplesK": 192,
+              "variance": 684824.0,
+              "latencyNs": 2609.33,
+              "cyclesPerByte": null,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint32_t-integer_count[10000]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 10000,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 2297.23,
+              "rse": 1.00896,
+              "windowDuration": "4.78797ms",
+              "fileSizeBytes": 54985,
+              "windowSamplesK": 30,
+              "variance": 1591320.0,
+              "latencyNs": 22826.7,
+              "cyclesPerByte": null,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 1991.28,
+              "rse": 2.02566,
+              "windowDuration": "4.864ms",
+              "fileSizeBytes": 54985,
+              "windowSamplesK": 30,
+              "variance": 8536550.0,
+              "latencyNs": 26333.9,
+              "cyclesPerByte": null,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint32_t-integer_count[100000]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 100000,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 1932.57,
+              "rse": 1.59965,
+              "windowDuration": "47.7281ms",
+              "fileSizeBytes": 549966,
+              "windowSamplesK": 30,
+              "variance": 565421000.0,
+              "latencyNs": 271394.0,
+              "cyclesPerByte": null,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 1768.53,
+              "rse": 1.82945,
+              "windowDuration": "51.756ms",
+              "fileSizeBytes": 549966,
+              "windowSamplesK": 30,
+              "variance": 883103000.0,
+              "latencyNs": 296567.0,
+              "cyclesPerByte": null,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint64_t-integer_count[100]-digit_length[0-20]",
+          "params": {
+            "group": "digit-counting-uint64_t",
+            "intType": "uint64_t",
+            "count": 100,
+            "digitLength": "0-20"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 1341.4,
+              "rse": 2.29613,
+              "windowDuration": "910.733ms",
+              "fileSizeBytes": 1050,
+              "windowSamplesK": 49152,
+              "variance": 14441500.0,
+              "latencyNs": 746.516,
+              "cyclesPerByte": null,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 739.514,
+              "rse": 2.07802,
+              "windowDuration": "1612.73ms",
+              "fileSizeBytes": 1050,
+              "windowSamplesK": 49152,
+              "variance": 38917500.0,
+              "latencyNs": 1354.1,
+              "cyclesPerByte": null,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint64_t-integer_count[1000]-digit_length[0-20]",
+          "params": {
+            "group": "digit-counting-uint64_t",
+            "intType": "uint64_t",
+            "count": 1000,
+            "digitLength": "0-20"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 812.759,
+              "rse": 1.15214,
+              "windowDuration": "1454.12ms",
+              "fileSizeBytes": 10503,
+              "windowSamplesK": 5862,
+              "variance": 118206000.0,
+              "latencyNs": 12325.1,
+              "cyclesPerByte": null,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 516.967,
+              "rse": 1.9013,
+              "windowDuration": "1219.67ms",
+              "fileSizeBytes": 10497,
+              "windowSamplesK": 3072,
+              "variance": 416418000.0,
+              "latencyNs": 19364.3,
+              "cyclesPerByte": null,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint64_t-integer_count[10000]-digit_length[0-20]",
+          "params": {
+            "group": "digit-counting-uint64_t",
+            "intType": "uint64_t",
+            "count": 10000,
+            "digitLength": "0-20"
+          },
+          "rows": [
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 662.539,
+              "rse": 1.62378,
+              "windowDuration": "66.1929ms",
+              "fileSizeBytes": 105085,
+              "windowSamplesK": 30,
+              "variance": 180982000.0,
+              "latencyNs": 151262.0,
+              "cyclesPerByte": null,
+              "verdict": "tie"
+            },
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 649.27,
+              "rse": 2.27888,
+              "windowDuration": "112.762ms",
+              "fileSizeBytes": 105069,
+              "windowSamplesK": 48,
+              "variance": 593731000.0,
+              "latencyNs": 154331.0,
+              "cyclesPerByte": null,
+              "verdict": "tie"
+            }
+          ]
+        }
+      ]
+    },
+    "windows-msvc": {
+      "cpu": "Intel(R) Core(TM) i9-14900KF-AVX2",
+      "os": "Windows-10.0.26200",
+      "compiler": "MSVC-19.44.35228.0",
+      "harness": {
+        "clearCpuCachesBeforeIterations": true,
+        "measuredIterationCount": 60,
+        "maxIterationCount": 1200,
+        "convergenceThreshold": 1.0,
+        "maxTimeInS": 5.0,
+        "rseThreshold": 2.5,
+        "maxK": 100000,
+        "minK": 30
+      },
+      "wtl": {
+        "rtc_digit_count": {
+          "wins": 5,
+          "ties": 5,
+          "losses": 0
+        },
+        "lemire_digit_count": {
+          "wins": 0,
+          "ties": 5,
+          "losses": 5
+        }
+      },
+      "tests": [
+        {
+          "name": "uint32_t-integer_count[10]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 10,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 1362.3,
+              "rse": 1.61447,
+              "windowDuration": "835.62ms",
+              "fileSizeBytes": 54,
+              "windowSamplesK": 6144,
+              "variance": 2370.85,
+              "latencyNs": 38.4766,
+              "cyclesPerByte": 0.806842,
+              "verdict": "tie"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 1358.45,
+              "rse": 2.27244,
+              "windowDuration": "736.455ms",
+              "fileSizeBytes": 55,
+              "windowSamplesK": 3072,
+              "variance": 2372.45,
+              "latencyNs": 38.6719,
+              "cyclesPerByte": 0.910686,
+              "verdict": "tie"
+            }
+          ]
+        },
+        {
+          "name": "uint32_t-integer_count[100]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 100,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 3779.9,
+              "rse": 0.896078,
+              "windowDuration": "72.7117ms",
+              "fileSizeBytes": 550,
+              "windowSamplesK": 1536,
+              "variance": 2376.15,
+              "latencyNs": 138.802,
+              "cyclesPerByte": 0.608209,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 3615.33,
+              "rse": 1.75492,
+              "windowDuration": "53.3853ms",
+              "fileSizeBytes": 548,
+              "windowSamplesK": 384,
+              "variance": 2479.33,
+              "latencyNs": 144.792,
+              "cyclesPerByte": 0.738496,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint32_t-integer_count[1000]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 1000,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 4551.99,
+              "rse": 0.807917,
+              "windowDuration": "1.7507ms",
+              "fileSizeBytes": 5473,
+              "windowSamplesK": 30,
+              "variance": 2574.71,
+              "latencyNs": 1146.67,
+              "cyclesPerByte": 0.658973,
+              "verdict": "tie"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 4525.68,
+              "rse": 0.904449,
+              "windowDuration": "2.2289ms",
+              "fileSizeBytes": 5473,
+              "windowSamplesK": 30,
+              "variance": 3264.37,
+              "latencyNs": 1153.33,
+              "cyclesPerByte": 0.662608,
+              "verdict": "tie"
+            }
+          ]
+        },
+        {
+          "name": "uint32_t-integer_count[10000]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 10000,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 4444.99,
+              "rse": 0.506012,
+              "windowDuration": "5.2598ms",
+              "fileSizeBytes": 55045,
+              "windowSamplesK": 30,
+              "variance": 107138.0,
+              "latencyNs": 11810.0,
+              "cyclesPerByte": 0.681198,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 4077.83,
+              "rse": 1.41527,
+              "windowDuration": "6.0092ms",
+              "fileSizeBytes": 55045,
+              "windowSamplesK": 30,
+              "variance": 995816.0,
+              "latencyNs": 12873.3,
+              "cyclesPerByte": 0.743074,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint32_t-integer_count[100000]-digit_length[0-10]",
+          "params": {
+            "group": "digit-counting-uint32_t",
+            "intType": "uint32_t",
+            "count": 100000,
+            "digitLength": "0-10"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 4203.69,
+              "rse": 2.12393,
+              "windowDuration": "54.7389ms",
+              "fileSizeBytes": 549869,
+              "windowSamplesK": 30,
+              "variance": 210600000.0,
+              "latencyNs": 124747.0,
+              "cyclesPerByte": 0.722695,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 3798.39,
+              "rse": 1.19877,
+              "windowDuration": "25.77ms",
+              "fileSizeBytes": 550131,
+              "windowSamplesK": 30,
+              "variance": 82248700.0,
+              "latencyNs": 138123.0,
+              "cyclesPerByte": 0.799739,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint64_t-integer_count[10]-digit_length[0-20]",
+          "params": {
+            "group": "digit-counting-uint64_t",
+            "intType": "uint64_t",
+            "count": 10,
+            "digitLength": "0-20"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 2606.1,
+              "rse": 2.27869,
+              "windowDuration": "737.16ms",
+              "fileSizeBytes": 105,
+              "windowSamplesK": 3072,
+              "variance": 2369.48,
+              "latencyNs": 38.5417,
+              "cyclesPerByte": 0.430924,
+              "verdict": "tie"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 2497.35,
+              "rse": 1.89065,
+              "windowDuration": "965.773ms",
+              "fileSizeBytes": 105,
+              "windowSamplesK": 24576,
+              "variance": 14140.4,
+              "latencyNs": 40.1204,
+              "cyclesPerByte": 0.5058,
+              "verdict": "tie"
+            }
+          ]
+        },
+        {
+          "name": "uint64_t-integer_count[100]-digit_length[0-20]",
+          "params": {
+            "group": "digit-counting-uint64_t",
+            "intType": "uint64_t",
+            "count": 100,
+            "digitLength": "0-20"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 6966.46,
+              "rse": 1.82063,
+              "windowDuration": "52.701ms",
+              "fileSizeBytes": 1048,
+              "windowSamplesK": 384,
+              "variance": 2620.69,
+              "latencyNs": 143.49,
+              "cyclesPerByte": 0.384755,
+              "verdict": "tie"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 6631.52,
+              "rse": 1.80917,
+              "windowDuration": "105.877ms",
+              "fileSizeBytes": 1048,
+              "windowSamplesK": 6144,
+              "variance": 45729.5,
+              "latencyNs": 150.798,
+              "cyclesPerByte": 0.383346,
+              "verdict": "tie"
+            }
+          ]
+        },
+        {
+          "name": "uint64_t-integer_count[1000]-digit_length[0-20]",
+          "params": {
+            "group": "digit-counting-uint64_t",
+            "intType": "uint64_t",
+            "count": 1000,
+            "digitLength": "0-20"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 8110.23,
+              "rse": 1.61851,
+              "windowDuration": "2.4741ms",
+              "fileSizeBytes": 10488,
+              "windowSamplesK": 30,
+              "variance": 11954.0,
+              "latencyNs": 1233.33,
+              "cyclesPerByte": 0.369341,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 7694.32,
+              "rse": 1.32979,
+              "windowDuration": "1.7651ms",
+              "fileSizeBytes": 10488,
+              "windowSamplesK": 30,
+              "variance": 8965.52,
+              "latencyNs": 1300.0,
+              "cyclesPerByte": 0.389789,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint64_t-integer_count[10000]-digit_length[0-20]",
+          "params": {
+            "group": "digit-counting-uint64_t",
+            "intType": "uint64_t",
+            "count": 10000,
+            "digitLength": "0-20"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 7960.04,
+              "rse": 1.73397,
+              "windowDuration": "29.8909ms",
+              "fileSizeBytes": 105116,
+              "windowSamplesK": 96,
+              "variance": 4577860.0,
+              "latencyNs": 12593.8,
+              "cyclesPerByte": 0.381074,
+              "verdict": "win"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 5034.27,
+              "rse": 0.816027,
+              "windowDuration": "3.7463ms",
+              "fileSizeBytes": 104802,
+              "windowSamplesK": 30,
+              "variance": 787402.0,
+              "latencyNs": 19853.3,
+              "cyclesPerByte": 0.602981,
+              "verdict": "loss"
+            }
+          ]
+        },
+        {
+          "name": "uint64_t-integer_count[100000]-digit_length[0-20]",
+          "params": {
+            "group": "digit-counting-uint64_t",
+            "intType": "uint64_t",
+            "count": 100000,
+            "digitLength": "0-20"
+          },
+          "rows": [
+            {
+              "lib": "rtc_digit_count",
+              "mbps": 7691.59,
+              "rse": 1.95945,
+              "windowDuration": "24.0006ms",
+              "fileSizeBytes": 1050144,
+              "windowSamplesK": 30,
+              "variance": 195279000.0,
+              "latencyNs": 130207.0,
+              "cyclesPerByte": 0.394905,
+              "verdict": "tie"
+            },
+            {
+              "lib": "lemire_digit_count",
+              "mbps": 7399.41,
+              "rse": 1.83134,
+              "windowDuration": "168.21ms",
+              "fileSizeBytes": 1050134,
+              "windowSamplesK": 30,
+              "variance": 184312000.0,
+              "latencyNs": 135347.0,
+              "cyclesPerByte": 0.410554,
+              "verdict": "tie"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

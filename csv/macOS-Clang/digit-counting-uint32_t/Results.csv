@@ -1,0 +1,13 @@
+# digit-counting-uint32_t Stage Results
+#CPU: Apple M1 (Virtual)-NEON
+#OS: macOS-25.5.0
+#Compiler: Clang-22.1.8
+
+# digit-counting-uint32_t Stage Config
+
+ClearCpuCachesBeforeIterations,MeasuredIterationCount,MaxIterationCount,ConvergenceThreshold,MaxTimeInS,RseThreshold,MaxK,MinK
+true,60,1200,1,5,2.5,100000,30
+
+Library,Wins,Ties,Losses
+lemire_digit_count,2,0,2
+rtc_digit_count,2,0,2
