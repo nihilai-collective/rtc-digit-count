@@ -1,0 +1,3 @@
+Library,Throughput (MB/s),RSE (%),Window Duration,File Size (Bytes),Window Samples (k),Variance,Latency / Run (ns),Cycles/Byte,Position
+rtc_digit_count,5739.36,1.92494,2.3193ms,74946,30,1.72395e+06,12453.3,0.528757,Tie
+lemire_digit_count,5533.48,1.26756,2.5067ms,74946,30,804195,12916.7,0.547254,Tie
